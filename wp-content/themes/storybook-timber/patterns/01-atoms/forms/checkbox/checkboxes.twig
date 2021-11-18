@@ -1,0 +1,14 @@
+{% set fieldset_base_class = fieldset.base_class | default('o-fieldset') %}
+
+{% if fieldset %}
+<fieldset class="{{ bem_classes(fieldset_base_class, fieldset.element, fieldset.modifiers, fieldset.extra) }}">
+  <legend>{{ fieldset.legend }}</legend>
+  <div class="{{ bem_classes(fieldset_base_class, 'checkboxes') }} u-spacing--half">
+{% endif %}
+  {% for item in fieldset.checkboxes %}
+    {% include "@atoms/forms/checkbox/checkbox.twig" with item %}
+  {% endfor %}
+{% if fieldset %}
+  </div>
+</fieldset>
+{% endif %}

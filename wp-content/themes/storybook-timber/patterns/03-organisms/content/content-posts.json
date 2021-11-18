@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "title": "Title",
+      "content": "Body",
+      "thumbnail": {
+        "src": "https://placeimg.com/320/180/any",
+        "alt": "A 16 by 9 image"
+      }
+    },
+    {
+      "title": "Title",
+      "content": "Body",
+      "thumbnail": {
+        "src": "https://placeimg.com/320/180/any",
+        "alt": "A 16 by 9 image"
+      }
+    },
+    {
+      "title": "Title",
+      "content": "Body",
+      "thumbnail": {
+        "src": "https://placeimg.com/320/180/any",
+        "alt": "A 16 by 9 image"
+      }
+    }
+  ]
+}

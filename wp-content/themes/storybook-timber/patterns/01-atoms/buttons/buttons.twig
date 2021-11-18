@@ -1,0 +1,20 @@
+{% set sb_base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(sb_base_class) }}" bp="grid 6@sm">
+  {% for item in buttons %}
+    <div class="{{ bem_classes(sb_base_class, 'item') }}">
+      <div class="{{ bem_classes(sb_base_class, 'content') }}">
+        {% include "@atoms/buttons/button.twig" with item %}
+      </div>
+      <pre class="{{ bem_classes(sb_base_class, 'info') }}">
+        {% if item.button.modifiers %}
+          {% for modifier in item.button.modifiers %}
+            <span>{{ '.o-button--' ~ modifier }}</span>
+          {% endfor %}
+        {% else %}
+          <span>{{ '.o-button' }}</span>
+        {% endif %}
+      </pre>
+    </div>
+  {% endfor %}
+</div>

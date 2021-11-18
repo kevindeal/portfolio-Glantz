@@ -1,0 +1,19 @@
+{% set page_sections_base_class = page_sections.base_class|default('c-page-sections') %}
+
+{% if not storybook %}
+  {% set page_sections = post.meta('page_sections') %}
+{% endif %}
+
+{% if page_sections %}
+  <div class="{{ bem_classes(page_sections_base_class, page_sections.element, page_sections.modifiers, page_sections.extra) }}">
+    {% for section in page_sections %}
+      {% if section.acf_fc_layout == 'employees' %}
+        {% include "@organisms/sections/section-employees.twig" %}
+      {% elseif section.acf_fc_layout == 'locations' %}
+        {% include "@organisms/sections/section-locations.twig"  %}
+      {% elseif section.acf_fc_layout == 'content' %}
+        {% include "@organisms/sections/section-content.twig" %}
+      {% endif %}
+    {% endfor %}
+    </div>
+{% endif %}

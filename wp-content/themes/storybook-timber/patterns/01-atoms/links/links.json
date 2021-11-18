@@ -1,0 +1,48 @@
+{
+  "links": [
+    {
+      "link": {
+        "text": "Link Default",
+        "url": "#",
+        "target": "_blank"
+      }
+    },
+    {
+      "link": {
+        "modifiers": [
+          "small"
+        ],
+        "text": "Link Small",
+        "url": "#"
+      }
+    },
+    {
+      "link": {
+        "modifiers": [
+          "alt"
+        ],
+        "text": "Link Alt",
+        "url": "#",
+        "arrow": true
+      }
+    },
+    {
+      "link": {
+        "modifiers": [
+          "small-alt"
+        ],
+        "text": "Link Small Alt",
+        "url": "#"
+      }
+    },
+    {
+      "link": {
+        "modifiers": [
+          "simple"
+        ],
+        "text": "Link Simple",
+        "url": "#"
+      }
+    }
+  ]
+}

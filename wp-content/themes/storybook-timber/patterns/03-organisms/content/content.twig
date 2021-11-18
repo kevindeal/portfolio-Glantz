@@ -1,0 +1,35 @@
+{% if post.content or post.thumbnail %}
+  {% set content_base_class = content.base_class|default('c-content') %}
+
+  <article class="{{ bem_classes(content_base_class) }} l-article">
+    <div class="{{ content_base_class ~ '--inner' }} u-spacing">
+      {% if post.thumbnail %}
+        <div class="{{ bem_classes(content_base_class, 'image') }}">
+          {% include "@atoms/images/image/responsive-image.twig" with {
+            "image": {
+              "src": post.thumbnail.src,
+              "alt": post.thumbnail.alt
+            }
+          } %}
+        </div>
+      {% endif %}
+      <div class="{{ bem_classes(content_base_class, 'title') }}">
+        {% include "@atoms/text/heading/heading.twig" with {
+          "heading": {
+            "level": "1",
+            "size": "xl",
+            "type": "primary",
+            "text": post.title
+          }
+        } %}
+      </div>
+      <div class="{{ bem_classes(content_base_class, 'body') }}">
+        {% include "@atoms/text/rich-text/rich-text.twig" with {
+          "rich_text": {
+            "text": post.content
+          }
+        } %}
+      </div>
+    </div>
+  </article>
+{% endif %}

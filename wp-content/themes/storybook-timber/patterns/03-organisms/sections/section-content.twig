@@ -1,0 +1,5 @@
+{% set section_content_base_class = section_content.base_class|default('c-section-content') %}
+
+<section class="{{ bem_classes(section_content_base_class, section_content.element, section_content.modifiers, section_content.extra ) }}">
+  <p>Section content coming soon.</p>
+</section>

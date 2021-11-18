@@ -1,0 +1,15 @@
+.o-intro {
+  position: relative;
+
+  * {
+    @include o-heading__primary--m;
+
+    color: $c-blue;
+  }
+
+  hr {
+    border-color: $c-gray--light;
+    margin: $space-and-half 0 $space-double 0;
+    width: 100px;
+  }
+}

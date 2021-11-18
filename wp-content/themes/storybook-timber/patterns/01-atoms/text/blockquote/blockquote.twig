@@ -1,0 +1,16 @@
+{% if blockquote %}
+  {% set blockquote_base_class = blockquote.base_class|default('o-blockquote') %}
+
+  <blockquote class="{{ bem_classes(blockquote_base_class, blockquote.element, blockquote.modifiers, blockquote.extra) }}" >
+    {% set icon = { decorative: true, name: 'quotes', modifiers: 'quotes' } %}
+    <div class="{{ bem_classes(blockquote_base_class, 'icon') }}">
+      {% include "@atoms/images/icons/icon.twig" with icon %}
+    </div>
+    {% if blockquote.text %}
+      <span>{{ blockquote.text }}</span>
+    {% endif %}
+    {% if blockquote.citation %}
+      <citation>{{ blockquote.citation }}</citation>
+    {% endif %}
+  </blockquote>
+{% endif %}

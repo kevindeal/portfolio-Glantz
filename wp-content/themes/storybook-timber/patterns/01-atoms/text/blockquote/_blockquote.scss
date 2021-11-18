@@ -1,0 +1,21 @@
+.o-blockquote {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: $space-double 0;
+  max-width: $max-width-m;
+  text-align: center;
+
+  @include o-heading__primary--l;
+
+  &__icon {
+    margin-bottom: $space;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: $icon-medium;
+    }
+  }
+}

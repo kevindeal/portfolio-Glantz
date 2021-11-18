@@ -1,0 +1,5 @@
+{% set section_locations_base_class = section_locations.base_class|default('c-section-locations') %}
+
+<section class="{{ bem_classes(section_locations_base_class, section_locations.element, section_locations.modifiers, section_locations.extra ) }}">
+  <p>Section content coming soon.</p>
+</section>

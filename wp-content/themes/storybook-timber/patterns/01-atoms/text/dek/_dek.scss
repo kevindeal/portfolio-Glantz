@@ -1,0 +1,13 @@
+.o-dek {
+  font-family: $font-secondary;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $c-blue;
+
+  &--large {
+    @include o-heading__primary--m;
+
+    font-weight: normal;
+    color: $c-blue;
+  }
+}

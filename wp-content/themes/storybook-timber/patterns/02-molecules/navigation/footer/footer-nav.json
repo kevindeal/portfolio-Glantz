@@ -1,0 +1,63 @@
+{
+  "footer_nav": {
+    "name": "Footer Navigation",
+    "items": [
+      {
+        "title": "About",
+        "url": "/"
+      },
+      {
+        "title": "Media Kit",
+        "url": "/"
+      },
+      {
+        "title": "Careers",
+        "url": "/"
+      },
+      {
+        "title": "Subscribers",
+        "url": "/"
+      },
+      {
+        "title": "Affiliate",
+        "url": "/"
+      },
+      {
+        "title": "RSS",
+        "url": "/"
+      },
+      {
+        "title": "Feedback",
+        "url": "/"
+      },
+      {
+        "title": "Newsletters",
+        "url": "/"
+      },
+      {
+        "title": "Sitemap",
+        "url": "/"
+      },
+      {
+        "title": "About Our Ads",
+        "url": "/"
+      },
+      {
+        "title": "Terms and Conditions",
+        "url": "/"
+      },
+      {
+        "title": "Do Not Sell My Personal Information",
+        "url": "/"
+      },
+      {
+        "title": "Privacy Policy",
+        "url": "/"
+      },
+      {
+        "title": "Contribute",
+        "url": "/"
+      }
+    ]
+  }
+}

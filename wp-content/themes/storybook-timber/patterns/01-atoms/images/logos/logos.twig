@@ -1,0 +1,10 @@
+{% set base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(base_class) }}" bp="grid 6@sm">
+  {% for item in logos %}
+    <div class="{{ bem_classes(base_class, 'item')}}">
+      <div class="{{ bem_classes(base_class, 'content') }}">{% include "@atoms/images/logos/logo.twig" with item %}</div>
+      <pre class="{{ bem_classes(base_class, 'info' ) }}">{{ item.logo.title }}</pre>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "image": {
+      "src": "https://placeimg.com/150/150/any",
+      "alt": "Alt"
+    },
+    "author": {
+      "name": "Lorem Ipsum",
+      "link": "https://google.com/"
+    },
+    "date": "Aug 18, 2020",
+    "hr": {
+      "modifiers": "accent"
+    }
+  }
+}

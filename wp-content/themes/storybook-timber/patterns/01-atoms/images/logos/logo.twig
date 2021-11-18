@@ -1,0 +1,12 @@
+{% if logo %}
+  {% set logo_base_class = logo.base_class|default("o-logo") %}
+  {% set base_url = storybook ? './dist/images/' : theme.path ~ '/dist/images/' %}
+
+  {% if logo.link %}
+    <a href="{{ logo.link }}" class="{{ bem_classes(logo_base_class, 'link') }}">
+  {% endif %}
+    <img class="{{ bem_classes(logo_base_class, logo.element, logo.modifiers, logo.extra) }}" src="{{ base_url }}{{ logo.img.src }}" alt="{{ logo.img.alt }}" />
+  {% if logo.link %}
+    </a>
+  {% endif %}
+{% endif %}

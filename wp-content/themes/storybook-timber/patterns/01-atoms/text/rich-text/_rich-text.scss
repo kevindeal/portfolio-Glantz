@@ -1,0 +1,38 @@
+.o-rich-text {
+  width: 100%;
+  margin: 0 auto;
+  pointer-events: auto;
+
+  & > * + * {
+    margin-top: $space;
+  }
+
+  > dl dd,
+  > dl dt,
+  > ol li,
+  > ul li,
+  > p {
+    font-family: $font-tertiary;
+    font-weight: 400;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    padding-top: $space;
+    margin-bottom: -$space-half;
+  }
+
+  h2:empty,
+  h3:empty,
+  p:empty {
+    display: none;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

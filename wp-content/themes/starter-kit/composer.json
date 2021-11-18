@@ -1,0 +1,105 @@
+{
+  "name": "wordpress-composer/wordpress-project",
+  "description": "Project template for Wordpress projects with composer",
+  "keywords": [
+    "wordpress",
+    "sage",
+    "timber"
+  ],
+  "type": "project",
+  "authors": [
+    {
+      "name": "Southleft LLC.",
+      "homepage": "http://southleft.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "perfmatters",
+        "type": "wordpress-plugin",
+        "version": "1.6.2",
+        "dist": {
+          "type": "zip",
+          "url": "./perfmatters.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "deliciousbrains/wp-migrate-db-pro",
+        "type": "wordpress-plugin",
+        "version": "1.9.14",
+        "dist": {
+          "type": "zip",
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=374c5dad-ea97-4c52-aaa8-04ed078edb3c&site_url=example.test"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "deliciousbrains/wp-migrate-db-pro-media-files",
+        "type": "wordpress-plugin",
+        "version": "1.4.16",
+        "dist": {
+          "type": "zip",
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-media-files-latest.zip?licence_key=374c5dad-ea97-4c52-aaa8-04ed078edb3c&site_url=example.test"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.9.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9NzY2MjZ8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTYtMDMtMDUgMTk6MzY6MzU=&t={%version}"
+        },
+        "require": {
+          "ffraenz/private-composer-installer": "^2.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "roots/wordpress": "^5.0",
+    "composer/installers": "^1.4"
+  },
+  "require-dev": {
+    "perfmatters": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "deliciousbrains/wp-migrate-db-pro": "*",
+    "deliciousbrains/wp-migrate-db-pro-media-files": "*",
+    "wpackagist-plugin/wordpress-seo": "*"
+  },
+  "extra": {
+    "wordpress-install-dir": "docroot",
+    "installer-paths": {
+      "docroot/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "docroot/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  },
+  "scripts": {
+    "remove-default-themes" : "find . type -d -name *twentyten* -o -name *twentyeleven* -o -name *twentytwelve* -o -name *twentythirteen* -o -name *twentyfourteen* -o -name *twentyfifteen* -o -name *twentysixteen* -o -name *twentyseventeen* -o -name *twentyeighteen* -o -name *twentynineteen* -o -name *timber-starter-theme* | xargs rm -rf",
+    "move-default-theme" : "find . type -d -name *storybook-timber* | exec mv ./storybook-timber/ ./docroot/wp-content/themes/",
+    "move-docroot-files" : "exec mv -v ./docroot/* .",
+    "remove-build-files" : "rm -rf composer.json | rm -rf composer.lock | rm -rf perfmatters.zip | rm -rf vendor | rm -rf docroot",
+    "build": [
+      "composer install",
+      "composer update",
+      "@remove-default-themes",
+      "@move-default-theme",
+      "@move-docroot-files",
+      "@remove-build-files"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{% if video %}
+  {% set video_base_class = video.base_class|default('o-video') %}
+
+  <div class="{{ bem_classes(video_base_class, video.element, video.modifiers, video.extra) }}">
+    {% block content %}
+      {{ video.content|raw }}
+    {% endblock %}
+  </div>
+{% endif %}

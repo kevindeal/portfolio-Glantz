@@ -1,0 +1,95 @@
+{
+  "storybook": true,
+  "icons": [
+    {
+      "icon": {
+        "title": "Facebook",
+        "name": "facebook",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Instagram",
+        "name": "instagram",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Twitter",
+        "name": "twitter",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "SMS",
+        "name": "sms",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Email",
+        "name": "email",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Menu",
+        "name": "menu",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Search",
+        "name": "search",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Close",
+        "name": "close",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Arrow Down",
+        "name": "arrow-down",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    },
+    {
+      "icon": {
+        "title": "Arrow Up",
+        "name": "arrow-up",
+        "modifiers": [
+          "xlarge"
+        ]
+      }
+    }
+  ]
+}

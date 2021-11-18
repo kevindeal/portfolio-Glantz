@@ -1,0 +1,90 @@
+/* ------------------------------------*\
+    $STORYBOOK
+\*------------------------------------ */
+.sb-show-main {
+  @include body-copy;
+
+  .c-block {
+    max-width: $medium;
+  }
+
+  .c-block-media {
+    max-width: $small;
+  }
+
+  .c-card,
+  .c-block-person,
+  .c-block-video {
+    max-width: $xsmall;
+  }
+}
+
+// Styleguide
+.sb-tiles {
+  margin: $space;
+
+  &__item {
+    border: 1px solid $c-gray--bg;
+    border-radius: $border-radius-curve--hard;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  &__content {
+    padding: $space;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  pre {
+    padding: $space-one-fourth $space-one-half;
+    margin: 0;
+    text-align: center;
+    color: black;
+    width: 100%;
+    border-top: 1px solid $c-gray--bg;
+    background-color: $c-gray--bg;
+    font-size: $font-size-s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: $line-height;
+
+    span {
+      margin: 0 $space-half;
+    }
+  }
+
+  .o-color {
+    min-height: 150px;
+    width: 100%;
+    height: auto;
+  }
+
+  .o-logo {
+    max-width: 250px;
+    max-height: 100px;
+    width: 100%;
+    height: auto;
+  }
+
+  &--images {
+    .sb-tiles__item,
+    .sb-tiles__content {
+      display: initial;
+    }
+
+    .sb-tiles__content > * {
+      margin: auto;
+    }
+  }
+}

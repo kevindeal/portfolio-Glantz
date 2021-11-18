@@ -1,0 +1,10 @@
+small,
+.o-small {
+  @include small-copy;
+
+  a {
+    @include o-link--small;
+
+    line-height: $line-height-s;
+  }
+}

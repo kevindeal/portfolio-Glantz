@@ -1,0 +1,27 @@
+{
+  "select": {
+    "id": "select-id",
+    "modifiers": "select-modifier",
+    "extra": "u-extra--class",
+    "label": "Select Dropdown",
+    "label_modifiers": "label-modifier",
+    "optgroup_label": "Select one",
+    "options": [
+      {
+        "text": "Choose an Option"
+      },
+      {
+        "text": "Option 1"
+      },
+      {
+        "text": "Option 2"
+      },
+      {
+        "text": "Option 3"
+      },
+      {
+        "text": "Option 4"
+      }
+    ]
+  }
+}

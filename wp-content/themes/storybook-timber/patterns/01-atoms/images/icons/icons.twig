@@ -1,0 +1,11 @@
+{% set base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(base_class, block_name, modifiers) }}" bp="grid 6@md 4@lg">
+  {% for item in icons %}
+    <div class="{{ bem_classes(base_class, 'item', modifiers) }}">
+      <div class="{{ bem_classes(base_class, 'content', modifiers ) }}">{% include "@atoms/images/icons/icon.twig" with item %}</div>
+      <pre class="{{ bem_classes(base_class, 'info', modifiers) }}">{{ item.icon.title }}</pre>
+    </div>
+  {% endfor %}
+</div>
+<br>

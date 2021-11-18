@@ -1,0 +1,51 @@
+.o-meta {
+  @include small-copy;
+
+  &--with-image {
+    max-width: 100px;
+    margin: 0 auto;
+    text-align: center;
+
+    .o-meta__author {
+      margin-right: 0;
+    }
+
+    .o-meta__date {
+      display: block;
+      margin-top: $space-one-fourth;
+    }
+  }
+
+  &__image-link {
+    display: block;
+  }
+
+  &__image {
+    max-width: 75px;
+    margin: 0 auto $space-one-fourth auto;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    border: 2px solid $c-white;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__author {
+    color: $c-gray--darkest;
+    margin-right: $space;
+    transition: $transition-all;
+
+    &:hover,
+    &:focus {
+      color: $c-red;
+    }
+  }
+
+  > a {
+    text-decoration: none;
+  }
+}

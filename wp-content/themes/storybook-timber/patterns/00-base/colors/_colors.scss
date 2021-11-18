@@ -1,0 +1,11 @@
+$colors: ("white": $c-white, "black": $c-black, "gray": $c-gray, "gray--lighter": $c-gray--lighter, "gray--light": $c-gray--light, "gray--medium": $c-gray--medium, "gray--dark": $c-gray--dark, "gray--darker": $c-gray--darker, "gray--bg": $c-gray--bg, "yellow": $c-yellow, "yellow--light": $c-yellow--light, "blue": $c-blue, "blue--lighter": $c-blue--lighter, "blue--light": $c-blue--light, "blue--medium": $c-blue--medium, "red": $c-red, "red--light": $c-red--light, "red--dark": $c-red--dark, "green": $c-green, "blue--twitter": $c-blue--twitter, "blue--facebook": $c-blue--facebook, "brown--instagram": $c-brown--instagram, "red--pinterest": $c-red--pinterest, "green--sms": $c-green--sms, "gray--email": $c-gray--email);
+
+$styles: ("background-color": "background-color", "color": "color", "path-fill": "fill");
+
+@each $style_key, $style_value in $styles {
+  @each $color_key, $color_value in $colors {
+    .u-#{$style_key}--#{$color_key} {
+      #{$style_value}: #{$color_value};
+    }
+  }
+}

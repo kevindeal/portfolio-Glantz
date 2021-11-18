@@ -1,0 +1,46 @@
+{% if posts %}
+  {% set content_posts_base_class = content_posts.base_class|default('c-posts') %}
+
+  <div class="{{ bem_classes(content_posts_base_class) }}" bp="grid 4">
+    {% for post in posts %}
+      {% include "@molecules/blocks/block.twig" with {
+        "block": {
+          "heading": {
+            "level": "2",
+            "size": "l",
+            "type": "primary",
+            "text": post.title,
+            "link": {
+              "url": post.link
+            }
+          },
+          "meta": {
+            "image": {
+              "src": post.author.avatar,
+              "alt": post.author.name
+            },
+            "author": {
+              "name": post.author.name,
+              "link": post.author.link
+            },
+            "date": post.date|date('M j, Y')
+          },
+          "kicker": {
+            "text": post.kicker,
+            "link": "/"
+          },
+          "dek": {
+            "modifiers": "large",
+            "text": post.content
+          },
+          "image": {
+            "src": post.thumbnail.src,
+            "alt": post.thumbnail.alt
+          }
+        }
+      } %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Sorry, there are no posts at this time.</p>
+{% endif %}

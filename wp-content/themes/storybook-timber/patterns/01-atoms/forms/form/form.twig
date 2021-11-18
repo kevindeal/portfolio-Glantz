@@ -1,0 +1,35 @@
+<form class="o-form u-spacing">
+  <div class="o-form-item">
+    <label for="edit-name" class="o-form-item__label is-required">Name*</label>
+    <input id="edit-name" autocorrect="none" autocapitalize="none" spellcheck="false" aria-describedby="edit-name--description" type="text" name="name" value="" size="60" maxlength="60" class="o-form-item__text is-required" required="required" aria-required="true" placeholder="First, Middle, Last">
+  </div>
+
+  <div class="o-form-item">
+    <label for="edit-pass" class="o-form-item__label is-required">Password*</label>
+    <input id="edit-pass" aria-describedby="edit-pass--description" type="password" name="pass" size="60" maxlength="128" class="o-form-item__password is-required" required="required" aria-required="true">
+    <small class="o-form-item__description">Enter the password that accompanies your username.</small>
+  </div>
+
+  <fieldset class="o-fieldset u-spacing">
+    <legend>Web and Email Address (fieldset)</legend>
+    <div class="o-form-item">
+       <label for="webaddress" class="o-form-item__label">Web Address</label>
+       <input id="webaddress" type="url" class="o-form-item__url" placeholder="http://">
+     </div>
+
+     <div class="o-form-item">
+       <label for="emailaddress" class="o-form-item__label">Email Address</label>
+       <input id="emailaddress" type="email" class="o-form-item__email" placeholder="Enter your email">
+     </div>
+  </fieldset>
+
+   <div class="o-form-item">
+     <label for="text" class="o-form-item__label">Number</label>
+     <input id="text" type="number" class="o-form-item__number" placeholder="Enter a number" pattern="[0-9]*">
+   </div>
+
+   <div class="o-form-item">
+     <label for="textarea" class="o-form-item__label">Textarea</label>
+     <textarea id="textarea" class="o-form-item__textarea"  rows="8" cols="48" placeholder="Enter your message here"></textarea>
+   </div>
+ </form>

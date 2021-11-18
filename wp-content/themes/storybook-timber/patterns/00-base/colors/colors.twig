@@ -1,0 +1,10 @@
+{% set sb_base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(sb_base_class) }}" bp="grid 6@md 4@lg">
+  {% for color in colors %}
+    <div class="{{ bem_classes(sb_base_class, 'item') }}">
+      <div class="{{ bem_classes(sb_base_class, 'content') }} o-color u-background-color--{{ color.name }}"></div>
+      <pre class="{{ bem_classes(sb_base_class, 'info') }}">$c-{{ color.name }}</pre>
+    </div>
+  {% endfor %}
+</div>

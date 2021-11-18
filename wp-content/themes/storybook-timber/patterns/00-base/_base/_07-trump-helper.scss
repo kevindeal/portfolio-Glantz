@@ -1,0 +1,96 @@
+/* ------------------------------------*\
+    $HELPER/TRUMP CLASSES
+\*------------------------------------ */
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+.is-vishidden,
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+/**
+ * Hide elements only present and necessary for js enabled browsers.
+ */
+.no-js {
+  &-hide {
+    display: none;
+  }
+}
+
+/**
+ * Misc
+ */
+.u-full-width {
+  width: 100%;
+}
+
+.u-no-wrap {
+  white-space: nowrap;
+}
+
+.u-not-round {
+  border-radius: 0;
+}
+
+.u-hover--bw-to-color {
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+
+  &:hover,
+  &:focus {
+    filter: grayscale(0);
+  }
+}
+
+.u-background-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+/**
+ * Center block
+ */
+.u-center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-vertically-inline {
+  @include media(">small") {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+      margin-left: $space;
+    }
+  }
+}
+
+.u-reversed-out {
+  color: $c-white;
+
+  p,
+  h1 a,
+  h2 a,
+  h3 a {
+    // sass-lint:disable-line force-element-nesting
+    color: $c-white;
+  }
+}
+
+.u-no-spacing {
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,12 @@
+{% set sb_base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(sb_base_class) }}" bp="grid 6@sm">
+  {% for item in hrs %}
+    <div class="{{ bem_classes(sb_base_class, 'item') }}">
+      <div class="{{ bem_classes(sb_base_class, 'content') }}">
+        {% include "@atoms/hr/hr.twig" with item %}
+      </div>
+      <pre class="{{ bem_classes(sb_base_class, 'info') }}">{{ item.hr.modifiers ? '.o-hr--' ~ item.hr.modifiers : ".o-hr" }}</pre>
+    </div>
+  {% endfor %}
+</div>

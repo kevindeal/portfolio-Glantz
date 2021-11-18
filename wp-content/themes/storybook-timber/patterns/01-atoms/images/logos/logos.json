@@ -1,0 +1,23 @@
+{
+  "storybook": true,
+  "logos": [
+    {
+      "logo": {
+        "title": "Logo Full",
+        "img": {
+          "src": "logo-full.svg",
+          "alt": "Southleft Logo Full"
+        }
+      }
+    },
+    {
+      "logo": {
+        "title": "Logo Icon",
+        "img": {
+          "src": "logo-icon.svg",
+          "alt": "Southleft Logo Icon"
+        }
+      }
+    }
+  ]
+}

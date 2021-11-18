@@ -1,0 +1,26 @@
+{% if banner %}
+  {% set banner_base_class = banner.banner_base_class|default('c-banner') %}
+
+  <div class="{{ bem_classes(banner_base_class, banner.element, banner.modifiers, banner.extra) }} u-spacing">
+    {% if banner.image %}
+      <div class="{{ bem_classes(banner_base_class, 'image') }}">
+        {% include "@atoms/images/image/responsive-image.twig" with banner %}
+      </div>
+    {% endif %}
+    {% if banner.heading %}
+      <div class="{{ bem_classes(banner_base_class, 'heading') }}">
+        {% include "@atoms/text/heading/heading.twig" with banner %}
+      </div>
+    {% endif %}
+    {% if banner.body %}
+      <div class="{{ bem_classes(banner_base_class, 'body', banner.body.modifiers) }}">
+        {{ banner.body|raw }}
+      </div>
+    {% endif %}
+    {% if banner.button %}
+      <div class="{{ bem_classes(banner_base_class, 'button') }}">
+        {% include "@atoms/buttons/button.twig" with banner %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

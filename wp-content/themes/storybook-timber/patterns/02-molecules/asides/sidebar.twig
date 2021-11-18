@@ -1,0 +1,6 @@
+{% if sidebar %}
+  {% set sidebar_base_class = sidebar_base_class|default('c-sidebar') %}
+  <aside class="{{ bem_classes(sidebar_base_class) }}">
+    Sidebar
+  </aside>
+{% endif %}

@@ -1,0 +1,79 @@
+/*
+ * General Mixins (put specific ones in component files where applicable)
+*/
+
+/* Mixin - Clearfix.
+ * Adds clearfix based on http://bourbon.io/docs/#clearfix
+ * use example =   @include cleafix
+*/
+
+@mixin body-copy {
+  font-family: $font-body;
+  font-size: $body-font-size;
+  line-height: $line-height;
+  letter-spacing: 0.5px;
+}
+
+@mixin small-copy {
+  font-family: $font-secondary;
+  font-size: $font-size-xs;
+  line-height: $line-height;
+  color: $c-gray--darker;
+
+  a {
+    text-decoration: underline;
+    color: $c-gray--darker;
+    transition: $transition-all;
+
+    &:hover,
+    &:focus {
+      color: $c-white;
+    }
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: $height / $width * 100%;
+    pointer-events: none;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/// Mixin - Wrapper
+/// Outer container mixin for large screens
+@mixin wrapper($max-width: $max-width-xl, $breakpoint: ">large", $v-margin: 0, $v-padding: 0, $h-padding: $space, $h-padding-large: $space-double) {
+  max-width: #{$max-width};
+  width: 100%;
+  margin: #{$v-margin} auto;
+  padding: #{$v-padding} #{$h-padding};
+
+  @include media($breakpoint) {
+    padding-left: #{$h-padding-large};
+    padding-right: #{$h-padding-large};
+  }
+}
+
+@mixin align-center {
+  text-align: center;
+}

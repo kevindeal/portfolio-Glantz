@@ -1,0 +1,96 @@
+{
+  "table": {
+    "heading": {
+      "rows": [
+        {
+          "cells": [
+            {
+              "text": "This is a heading",
+              "colspan": "4"
+            }
+          ]
+        }
+      ]
+    },
+    "body": {
+      "rows": [
+        {
+          "cells": [
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            },
+            {
+              "text": "This is a cell"
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "rows": [
+        {
+          "cells": [
+            {
+              "text": "This is a footer",
+              "colspan": "4"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

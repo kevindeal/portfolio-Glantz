@@ -1,0 +1,13 @@
+{
+  "map": {
+    "address": {
+      "street_address_1": "400 Market St",
+      "street_address_2": "",
+      "city": "Santa Fe",
+      "state": {
+        "value": "NM"
+      },
+      "zipcode": "87501"
+    }
+  }
+}

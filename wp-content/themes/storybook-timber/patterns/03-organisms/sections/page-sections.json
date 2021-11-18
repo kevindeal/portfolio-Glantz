@@ -1,0 +1,14 @@
+{
+  "storybook": true,
+  "page_sections": [
+    {
+      "acf_fc_layout": "employees"
+    },
+    {
+      "acf_fc_layout": "content"
+    },
+    {
+      "acf_fc_layout": "locations"
+    }
+  ]
+}

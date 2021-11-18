@@ -1,0 +1,54 @@
+{% set header_base_class = header.base_class|default('c-header') %}
+
+<header role="banner" class="{{ bem_classes(header_base_class, header.element, header.modifiers, header.extra ) }}">
+  <div class="{{ header_base_class ~ '--inner' }} l-container">
+    <div class="{{ bem_classes(header_base_class, 'logo', logo_modifiers) }}">
+      {% include "@atoms/images/logos/logo.twig" with {
+        "logo": {
+          "img": {
+            "src": logo_src,
+            "alt": logo_alt,
+          },
+          "link": logo_link
+        }
+      } %}
+    </div>
+    <div class="{{ bem_classes(header_base_class, 'nav') }}">
+      {% include "@molecules/navigation/header/header-nav.twig" %}
+      {% include "@atoms/buttons/button.twig" with {
+        "button": {
+          "extra": [
+            bem_classes(header_base_class, 'icon-search'),
+            "js-toggle"
+          ],
+          "icon": {
+            "name": "search",
+            "modifiers": "small"
+          },
+          "attributes": {
+            "aria-label": "Search",
+            "data-toggled": "body",
+            "data-prefix": "search"
+          }
+        }
+      } %}
+      {% include "@atoms/buttons/button.twig" with {
+        "button": {
+          "extra": [
+            bem_classes(header_base_class, 'icon-menu'),
+            "js-toggle"
+          ],
+          "icon": {
+            "name": "menu",
+            "modifiers": "small"
+          },
+          "attributes": {
+            "aria-label": "Menu",
+            "data-toggled": "body",
+            "data-prefix": "menu"
+          }
+        }
+      } %}
+    </div>
+  </div>
+</header>

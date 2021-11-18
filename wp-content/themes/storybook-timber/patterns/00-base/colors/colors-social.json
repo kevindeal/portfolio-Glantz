@@ -1,0 +1,22 @@
+{
+  "colors": [
+    {
+      "name": "blue--twitter"
+    },
+    {
+      "name": "blue--facebook"
+    },
+    {
+      "name": "brown--instagram"
+    },
+    {
+      "name": "red--pinterest"
+    },
+    {
+      "name": "green--sms"
+    },
+    {
+      "name": "gray--email"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "block": {
+    "base_class": "c-block",
+    "modifiers": "with-underline",
+    "heading": {
+      "level": "2",
+      "type": "primary",
+      "size": "l",
+      "text": "This is the block heading that should break across 2 lines",
+      "link": {
+        "url": "https://google.com/"
+      }
+    },
+    "meta": {
+      "author": {
+        "name": "Lorem Ipsum"
+      },
+      "date": "10/5/2021"
+    },
+    "kicker": {
+      "text": "Lorem Ipsum",
+      "link": "https://google.com/"
+    },
+    "dek": {
+      "text": "Vestibulum lectus mauris ultrices eros in. Aliquam vestibulum morbi blandit cursus."
+    },
+    "figure" : {
+      "link": "https://google.com/",
+      "type": "video",
+      "image": {
+        "modifiers": "square",
+        "src": "https://placeimg.com/300/300/nature",
+        "alt": "This is the alt text"
+      }
+    }
+  }
+}

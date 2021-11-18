@@ -1,0 +1,69 @@
+/*
+ * Colors
+*/
+$c-white: #fff;
+$c-black: #000;
+
+$c-gray: #6d6e70;
+$c-gray--lightest: #e2e2e3;
+$c-gray--lighter: #dbdada;
+$c-gray--light: #d3d6d9;
+$c-gray--medium: #aab1b7;
+$c-gray--dark: #898989;
+$c-gray--darker: darken($c-gray--dark, 20);
+$c-gray--darkest: #222;
+$c-gray--bg: lighten($c-gray--light, 10);
+
+// Brand Colors
+$c-yellow: #ffd204;
+$c-yellow--light: lighten($c-yellow, 30);
+$c-yellow--medium: #ffd900;
+$c-blue: #11385b;
+$c-blue--lighter: lighten(#069, 10%);
+$c-blue--light: #2c4989;
+$c-blue--medium: #069;
+$c-red: #9b1e25;
+$c-red--light: #ed0505;
+$c-red--dark: darken($c-red, 20%);
+$c-green: #8fcea6;
+
+$c-primary: $c-yellow;
+$c-secondary: $c-blue--medium;
+$c-tertiary: $c-red;
+
+// Social Colors
+$c-blue--twitter: #13c4f8;
+$c-blue--facebook: #4a66a3;
+$c-brown--instagram: #b6a58e;
+$c-red--pinterest: #ff423e;
+$c-green--sms: #8fdf0e;
+$c-gray--email: #aeaeae;
+
+// Border/Overlay Colors
+$c-border: $c-gray--lighter;
+$c-overylay: rgba(0, 0, 0, 0.5);
+$c-overylay--dark: rgba(0, 0, 0, 0.8);
+
+// Default Colors
+$c-error--light: #f99;
+$c-error: #cb4324;
+$c-error--dark: #bf2600;
+$c-error--darker: #841a00;
+
+$c-valid--lighter: #fafdfc;
+$c-valid--light: #ecf3ee;
+$c-valid: #36b370;
+$c-valid--dark: #008842;
+$c-valid--darker: #1a6343;
+
+$c-warning--lighter: #fffef9;
+$c-warning--light: #fffae6;
+$c-warning: #ffab00;
+$c-warning--dark: #b26100;
+$c-warning--darker: #774100;
+
+$c-information--lighter: #fffef9;
+$c-information--light: #e6fcff;
+$c-information: #00b8d9;
+$c-information--dark: #008da6;
+$c-information--darker: #005b6b;

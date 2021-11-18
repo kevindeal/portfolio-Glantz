@@ -1,0 +1,22 @@
+{% if select %}
+  {% set select_base_class = select_base_class|default('o-form-item') %}
+
+  <div class="{{ bem_classes(select_base_class, select.element, select.modifiers, select.extra) }}">
+    {% if select.label %}
+      <label class="{{ bem_classes(select_base_class, 'label' ) }}" for="select">{{ select.label }}</label>
+    {% endif %}
+    {% if select.options %}
+      <select class="{{ bem_classes(select_base_class, 'select') }}">
+        {% if select.optgroup_label %}
+          <optgroup label="{{ select.optgroup_label }}">
+        {% endif %}
+          {% for option in select.options %}
+            <option>{{ option.text }}</option>
+          {% endfor %}
+        {% if select.optgroup_label %}
+          </optgroup>
+        {% endif %}
+      </select>
+    {% endif %}
+  </div>
+{% endif %}

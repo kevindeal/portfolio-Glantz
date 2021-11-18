@@ -1,0 +1,32 @@
+{
+  "fieldset": {
+    "legend": "Checkboxes",
+    "checkboxes": [
+      {
+        "checkbox": {
+          "id": "option-1",
+          "text": "Option 1",
+          "checked": true
+        }
+      },
+      {
+        "checkbox": {
+          "id": "option-2",
+          "text": "Option 2"
+        }
+      },
+      {
+        "checkbox": {
+          "id": "option-3",
+          "text": "Option 3"
+        }
+      },
+      {
+        "checkbox": {
+          "id": "option-4",
+          "text": "Option 4"
+        }
+      }
+    ]
+  }
+}

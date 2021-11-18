@@ -1,0 +1,55 @@
+.o-icon {
+  display: inline-flex;
+
+  use,
+  path {
+    fill: currentColor;
+  }
+
+  &#{&}--quotes {
+    margin-bottom: $space-half;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--xsmall {
+    width: $icon-xsmall;
+    height: $icon-xsmall;
+  }
+
+  &--small {
+    width: $icon-small;
+    height: $icon-small;
+  }
+
+  &--medium {
+    width: $icon-medium;
+    height: $icon-medium;
+  }
+
+  &--large {
+    width: $icon-large;
+    height: $icon-large;
+  }
+
+  &--xlarge {
+    width: $icon-xlarge;
+    height: $icon-xlarge;
+  }
+
+  &--xxlarge {
+    width: $icon-xxlarge;
+    height: $icon-xxlarge;
+  }
+}
+
+.o-arrow {
+  display: inline-flex;
+  margin-left: $space-one-half;
+  line-height: 1;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -3px;
+}

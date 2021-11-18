@@ -1,0 +1,14 @@
+{% set base_class = fieldset.base_class|default('o-fieldset') %}
+
+{% if fieldset %}
+<fieldset class="{{ bem_classes(fieldset_base_class, fieldset.element, fieldset.modifiers, fieldset.extra) }}">
+  <legend>{{ fieldset.legend }}</legend>
+  <div class="{{ bem_classes(fieldset_base_class, 'radios') }} u-spacing--half">
+{% endif %}
+  {% for key, item in fieldset.radios %}
+    {% include "@atoms/forms/radio/radio.twig" with item %}
+  {% endfor %}
+{% if fieldset %}
+  </div>
+</fieldset>
+{% endif %}

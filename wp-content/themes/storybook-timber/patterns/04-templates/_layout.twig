@@ -1,0 +1,21 @@
+{% set layout_base_class = layout.base_class|default('l-main') %}
+{% set layout_extra_classes = ["l-wrap l-container"] %}
+
+{% if sidebar %}
+  {% set layout_extra_classes = layout_extra_classes|merge(["has-sidebar"]) %}
+{% endif %}
+
+<html class="no-js no-svg" {{ site.language_attributes }}>
+  {% include "@templates/_head.twig" %}
+  <body class="body{{ ' ' ~ body_class }}" data-template="base.twig">
+    <a class="skip-link screen-reader-text visually-hidden" href="#content">Skip to content</a>
+    {% include "@organisms/global/header/header.twig" %}
+    {% block sections_before %}{% endblock %}
+    <main role="document" class="{{ bem_classes(layout_base_class, layout.element, layout.modifiers, layout_extra_classes) }}">
+      {% block content %}{% endblock %}
+      {% block sidebar %}{% endblock %}
+    </main>
+    {% block sections_after %}{% endblock %}
+    {% include "@organisms/global/footer/footer.twig" %}
+  </body>
+</html>

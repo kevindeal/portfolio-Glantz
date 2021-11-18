@@ -1,0 +1,30 @@
+{% set footer_base_class = footer.base_class|default('c-footer') %}
+
+<footer class="{{ bem_classes(footer_base_class) }} js-footer no-print" role="contentinfo">
+  <div class="{{ footer_base_class ~ '--inner' }} l-container u-spacing--double">
+    <div class="{{ bem_classes(footer_base_class, 'grid') }}" bp="grid">
+      <div class="{{ bem_classes(footer_base_class, 'menu') }}" bp="9@md">
+        {% include "@molecules/navigation/footer/footer-nav.twig" %}
+      </div>
+      <div class="{{ bem_classes(footer_base_class, 'social') }}" bp="3@md">
+        {% include "@molecules/components/social/social-links/social-links.twig" %}
+      </div>
+    </div>
+    <div class="{{ bem_classes(footer_base_class, 'copyright') }}">
+      {% include "@atoms/images/logos/logo.twig" with {
+        "logo": {
+          "img": {
+            "src": logo_src,
+            "alt": logo_alt,
+          },
+          "link": logo_link
+        }
+      } %}
+      <span class="o-copyright o-small">{{ copyright }}</span>
+    </div>
+  </div>
+</footer>
+
+{% if theme.path %}
+  {{ function('wp_footer') }}
+{% endif %}

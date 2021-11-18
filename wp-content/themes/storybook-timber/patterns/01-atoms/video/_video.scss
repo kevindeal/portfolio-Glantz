@@ -1,0 +1,24 @@
+/* Responsive Video using CSS only */
+.o-video {
+  height: 0;
+  overflow: hidden;
+  padding-top: $space;
+  padding-bottom: 56.25%;
+
+  /* 56.25% = 16x9 */
+  position: relative;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.o-video--full {
+  padding-bottom: 75%;
+
+  /* 75% = 4x3 */
+}

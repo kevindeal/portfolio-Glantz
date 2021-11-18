@@ -1,0 +1,12 @@
+{% set sb_base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(sb_base_class) }}" bp="grid 12">
+  {% for item in headings %}
+    <div class="{{ bem_classes(sb_base_class, 'item') }}">
+      <div class="{{ bem_classes(sb_base_class, 'content') }}">
+        {% include "@atoms/text/heading/heading.twig" with item %}
+      </div>
+      <pre class="{{ bem_classes(sb_base_class, 'info') }}">.o-heading{{ item.heading.type ? '__' ~ item.heading.type : '' }}{{ item.heading.size ? '--' ~ item.heading.size : '' }}</pre>
+    </div>
+  {% endfor %}
+</div>

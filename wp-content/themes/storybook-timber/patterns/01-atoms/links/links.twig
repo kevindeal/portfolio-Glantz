@@ -1,0 +1,20 @@
+{% set sb_base_class = "sb-tiles" %}
+
+<div class="{{ bem_classes(sb_base_class) }}" bp="grid 6@sm">
+  {% for item in links %}
+    <div class="{{ bem_classes(sb_base_class, 'item') }}">
+      <div class="{{ bem_classes(sb_base_class, 'content') }}">
+        {% include "@atoms/links/link.twig" with item %}
+      </div>
+      <pre class="{{ bem_classes(sb_base_class, 'info') }}">
+        {% if item.link.modifiers %}
+          {% for modifier in item.link.modifiers %}
+            <span>{{ '.o-link--' ~ modifier }}</span>
+          {% endfor %}
+        {% else %}
+          <span>{{ '.o-link' }}</span>
+        {% endif %}
+      </pre>
+    </div>
+  {% endfor %}
+</div>

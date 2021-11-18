@@ -1,0 +1,36 @@
+{
+  "fieldset": {
+    "legend": "Radios",
+    "radios": [
+      {
+        "radio": {
+          "id": "option-1",
+          "name": "radio_group",
+          "text": "Option 1",
+          "checked": true
+        }
+      },
+      {
+        "radio": {
+          "id": "option-2",
+          "name": "radio_group",
+          "text": "Option 2"
+        }
+      },
+      {
+        "radio": {
+          "id": "option-3",
+          "name": "radio_group",
+          "text": "Option 3"
+        }
+      },
+      {
+        "radio": {
+          "id": "option-4",
+          "name": "radio_group",
+          "text": "Option 4"
+        }
+      }
+    ]
+  }
+}

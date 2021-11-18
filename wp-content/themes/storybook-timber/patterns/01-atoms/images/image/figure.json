@@ -1,0 +1,11 @@
+{
+  "figure" : {
+    "link": "#",
+    "image": {
+      "output_tag": true,
+      "src": "https://placeimg.com/1200/200/tech",
+      "alt": "This is the alt text",
+      "caption": "This is an image caption."
+    }
+  }
+}

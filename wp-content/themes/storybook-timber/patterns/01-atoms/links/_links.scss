@@ -1,0 +1,207 @@
+@mixin o-link($color: currentColor, $color-hover: currentColor) {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: $transition-all;
+  text-decoration: none;
+  color: $color;
+  box-shadow: inset 0 -3px 0 -1px $c-yellow;
+
+  span {
+    transition: right 0.25s $transition-effect;
+    right: 3px;
+    color: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-hover;
+    box-shadow: inset 0 -25px 0 -1px $c-yellow;
+
+    span {
+      right: 0;
+    }
+  }
+}
+
+@mixin o-link--small {
+  @include o-link($c-gray--darker, $c-black);
+
+  font-family: $font-secondary;
+  font-size: $font-size-xs;
+  border-bottom: 1px solid $c-yellow;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin o-link--small-alt {
+  @include o-link($c-gray--darker, $c-black);
+
+  font-family: $font-secondary;
+  font-size: $font-size-xs;
+  text-decoration: underline;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin o-link--alt {
+  @include o-link($c-gray--darker, $c-red);
+
+  @include o-heading__secondary--xs;
+
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin o-link--simple {
+  @include o-link($c-gray--darker, $c-red);
+
+  font-family: $font-secondary;
+  font-size: $font-size-s;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.o-link {
+  @include o-link;
+
+  &--small {
+    @include o-link--small;
+  }
+
+  &--small-alt {
+    @include o-link--small-alt;
+  }
+
+  &--alt {
+    @include o-link--alt;
+  }
+
+  &--simple {
+    @include o-link--simple;
+  }
+}
+
+/* Links Subscribe */
+.c-links-subscribe {
+  font-family: $font-secondary;
+  font-size: $font-size-s;
+  color: $c-gray--darker;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: $line-height-s;
+
+  &__title {
+    margin-right: $space-half;
+    font-weight: bold;
+    font-family: $font-primary;
+    color: $c-black;
+  }
+
+  &__links {
+    display: inline-flex;
+
+    a {
+      white-space: nowrap;
+
+      &:hover,
+      &:focus {
+        &::after {
+          color: $c-gray--darker;
+        }
+      }
+    }
+
+    a::after {
+      content: "/";
+      margin: 0 $space-one-third;
+    }
+
+    a:last-child::after {
+      display: none;
+    }
+  }
+
+  &__tooltip {
+    position: relative;
+
+    &.is-active {
+      .c-links-subscribe__tooltip-wrap {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+      }
+    }
+
+    &-label {
+      cursor: pointer;
+
+      &:hover {
+        color: $c-red;
+      }
+    }
+
+    &-wrap {
+      position: absolute;
+      top: -55px;
+      left: 50%;
+      right: 0;
+      transform: translateX(-50%);
+      margin: auto;
+      background-color: $c-white;
+      padding: $space-half;
+      box-shadow: $box-shadow--small;
+      border-radius: $border-radius-curve;
+      display: table;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transition: opacity 0.25s $transition-effect;
+
+      &::before {
+        z-index: 3;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 10px;
+        width: 20px;
+        background-color: $c-white;
+        transform: translateX(-50%);
+      }
+
+      &::after {
+        z-index: 2;
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        width: 12px;
+        height: 12px;
+        box-shadow: $box-shadow--small;
+        background-color: $c-white;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+  }
+}

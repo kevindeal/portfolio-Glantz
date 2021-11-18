@@ -1,0 +1,7 @@
+{% if eyebrow.text %}
+  {% set eyebrow_base_class = eyebrow.base_class|default('o-eyebrow') %}
+
+  <span class="{{ bem_classes(eyebrow_base_class, eyebrow.element, eyebrow.modifiers, eyebrow.extra) }}">
+    {{ eyebrow.text }}
+  </span>
+{% endif %}

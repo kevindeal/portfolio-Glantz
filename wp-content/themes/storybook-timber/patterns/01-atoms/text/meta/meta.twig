@@ -1,0 +1,37 @@
+{% if meta.author.name or meta.date %}
+  {% set meta_base_class = meta.base_class|default('o-meta') %}
+  {% if meta.image.src %}
+    {% set meta_modifiers_class = meta.modifiers|default('with-image') %}
+  {% endif %}
+
+  <div class="{{ bem_classes(meta_base_class, meta.element, meta_modifiers_class, meta.extra) }}">
+    {% if meta.image.src %}
+      {% if meta.author.link %}
+        <a href="{{ meta.author.link }}" class="{{ bem_classes(meta_base_class, 'image-link') }}">
+      {% endif %}
+        <div class="{{ bem_classes(meta_base_class, 'image') }}">
+          {% include "@atoms/images/image/responsive-image.twig" with meta %}
+        </div>
+      {% if meta.author.link %}
+        </a>
+      {% endif %}
+    {% endif %}
+    {% if meta.author %}
+      {% if meta.author.link %}
+        <a href="{{ meta.author.link }}" class="{{ bem_classes(meta_base_class, 'link') }}">
+      {% endif %}
+      {% if meta.author.name %}
+        <span itemprop="author" itemtype="https://schema.org/Person" class="{{ bem_classes(meta_base_class, 'author', meta.author.modifiers, meta.author.extra) }}" >
+          <strong>{{ meta.author.name }}</strong>
+        </span>
+      {% endif %}
+      {% if meta.author.link %}
+        </a>
+      {% endif %}
+    {% endif %}
+    {% include "@atoms/hr/hr.twig" with meta %}
+    {% if meta.date %}
+      <time datetime="{{ meta.date|date('M j, Y') }}" class="{{ bem_classes(meta_base_class, 'date', meta.date.modifiers, meta.date.extra) }}" >{{ meta.date }}</time>
+    {% endif %}
+  </div>
+{% endif %}

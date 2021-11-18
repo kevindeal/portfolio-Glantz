@@ -1,0 +1,89 @@
+/*
+ * General Layout
+*/
+
+$sidebar-width: 300px;
+$main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
+
+/**
+ * Wrapping element to keep content contained and centered.
+ */
+.l-wrap {
+  padding-left: $space;
+  padding-right: $space;
+  width: 100%;
+
+  @include align-center;
+}
+
+/**
+ * Layout containers - keep content centered and within a maximum width. Also
+ * adjusts left and right padding as the viewport widens.
+ */
+
+.l-container {
+  @include align-center;
+
+  max-width: $max-width;
+
+  &--m {
+    @include align-center;
+
+    max-width: $max-width-m;
+  }
+
+  &--l {
+    @include align-center;
+
+    max-width: $max-width-l;
+  }
+
+  &--xl {
+    @include align-center;
+
+    max-width: $max-width-xl;
+  }
+
+  &--xxl {
+    @include align-center;
+
+    max-width: $max-width-xxl;
+  }
+}
+
+.l-container--gradient-white {
+  padding: $space-double $space;
+  background: linear-gradient($c-white, rgba(255, 255, 255, 0));
+}
+
+.l-main {
+  &.has-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media(">medium") {
+      flex-wrap: nowrap;
+    }
+
+
+    > *:first-child {
+      width: 100%;
+
+      @include media(">medium") {
+        width: $main-width;
+      }
+    }
+
+    > *:last-child {
+      width: 100%;
+      margin-top: $space-double;
+
+      @include media(">medium") {
+        margin-top: 0;
+        min-width: $sidebar-width;
+        max-width: $sidebar-width;
+      }
+    }
+  }
+}

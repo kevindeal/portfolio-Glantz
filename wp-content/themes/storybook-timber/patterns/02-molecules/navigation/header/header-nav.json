@@ -1,0 +1,42 @@
+{
+  "header_nav": {
+    "extra": "is-active"
+  },
+  "primary_nav": {
+    "name": "Primary Navigation",
+    "items": [
+      {
+        "title": "Gear",
+        "url": "/"
+      },
+      {
+        "title": "Health",
+        "url": "/"
+      },
+      {
+        "title": "Travel",
+        "url": "/"
+      },
+      {
+        "title": "Culture",
+        "url": "/"
+      },
+      {
+        "title": "Long Reads",
+        "url": "/"
+      },
+      {
+        "title": "Video",
+        "url": "/"
+      },
+      {
+        "title": "Podcast",
+        "url": "/"
+      },
+      {
+        "title": "Contribute",
+        "url": "/"
+      }
+    ]
+  }
+}

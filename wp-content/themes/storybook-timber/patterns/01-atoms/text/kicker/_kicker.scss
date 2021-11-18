@@ -1,0 +1,14 @@
+.o-kicker {
+  @include o-heading__secondary--xs;
+
+  letter-spacing: $letter-spacing-1;
+  display: inline-block;
+  color: $c-gray--darker;
+
+  a {
+    &:hover,
+    &:active {
+      color: $c-red;
+    }
+  }
+}

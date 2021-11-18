@@ -1,0 +1,12 @@
+{
+  "heading": {
+    "level": "1",
+    "type": "primary",
+    "size": "xl",
+    "text": "Primary Heading XL",
+    "link": {
+      "url": "/",
+      "element": "link"
+    }
+  }
+}

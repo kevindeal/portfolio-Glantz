@@ -1,0 +1,44 @@
+{
+  "images": [
+    {
+      "title": ".o-picture--round",
+      "picture": {
+        "modifiers": "round"
+      },
+      "image": {
+        "src": "https://placeimg.com/900/900/any",
+        "alt": "Alt"
+      }
+    },
+    {
+      "title": ".o-picture--square",
+      "picture": {
+        "modifiers": "square"
+      },
+      "image": {
+        "src": "https://placeimg.com/900/900/any",
+        "alt": "Alt"
+      }
+    },
+    {
+      "title": ".o-picture--16x9",
+      "picture": {
+        "modifiers": "16x9"
+      },
+      "image": {
+        "src": "https://placeimg.com/1200/675/any",
+        "alt": "Alt"
+      }
+    },
+    {
+      "title": ".o-picture--4x3",
+      "picture": {
+        "modifiers": "4x3"
+      },
+      "image": {
+        "src": "https://placeimg.com/1200/900/any",
+        "alt": "Alt"
+      }
+    }
+  ]
+}

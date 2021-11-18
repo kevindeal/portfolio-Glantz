@@ -1,0 +1,37 @@
+{
+  "colors": [
+    {
+      "name": "yellow"
+    },
+    {
+      "name": "yellow--light"
+    },
+    {
+      "name": "yellow--medium"
+    },
+    {
+      "name": "blue"
+    },
+    {
+      "name": "blue--lighter"
+    },
+    {
+      "name": "blue--light"
+    },
+    {
+      "name": "blue--medium"
+    },
+    {
+      "name": "red"
+    },
+    {
+      "name": "red--light"
+    },
+    {
+      "name": "red--dark"
+    },
+    {
+      "name": "green"
+    }
+  ]
+}

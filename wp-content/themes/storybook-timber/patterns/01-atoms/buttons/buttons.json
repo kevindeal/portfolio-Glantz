@@ -1,0 +1,21 @@
+{
+  "buttons": [
+    {
+      "button": {
+        "text": "Button Default",
+        "url": "#",
+        "target": "_blank",
+        "arrow": true
+      }
+    },
+    {
+      "button": {
+        "modifiers": [
+          "small"
+        ],
+        "text": "Button Small",
+        "url": "#"
+      }
+    }
+  ]
+}

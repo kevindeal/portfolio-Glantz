@@ -1,0 +1,28 @@
+{% if icon %}
+  {% set icon_base_class = icon.base_class|default('o-icon') %}
+  {% set base_image_path = storybook ? './dist/images/' : theme.path ~ '/dist/images/' %}
+
+  <svg class="{{ bem_classes(icon_base_class, icon.element, icon.modifiers, icon.extra) }}"
+    {% if icon.decorative %}
+      aria-hidden="true" role="img"
+    {% elseif icon.role %}
+      role="{{ icon.role }}"
+    {% endif %}
+
+    {% if icon.title %}
+      aria-labelledby="title-{{ icon.name }}"
+    {% endif %}
+
+    {% if icon.desc %}
+      aria-describedby="desc-{{ icon.name }}"
+    {% endif %}
+  >
+    {% if icon.title %}
+      <title id="title-{{ icon.name }}">{{ icon.title }}</title>
+    {% endif %}
+    {% if icon.desc %}
+      <desc id="desc-{{ icon.name }}">{{ icon.desc }}</desc>
+    {% endif %}
+    <use xlink:href="{{ base_image_path }}icons.svg#{{ icon.name }}"></use>
+  </svg>
+{% endif %}
