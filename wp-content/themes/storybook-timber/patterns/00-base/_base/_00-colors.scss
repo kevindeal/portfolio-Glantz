@@ -2,7 +2,7 @@
  * Colors
 */
 $c-white: #fff;
-$c-black: #000;
+$c-black: #202944;
 
 $c-gray: #6d6e70;
 $c-gray--lightest: #e2e2e3;
@@ -22,14 +22,18 @@ $c-blue: #11385b;
 $c-blue--lighter: lighten(#069, 10%);
 $c-blue--light: #2c4989;
 $c-blue--medium: #069;
-$c-red: #9b1e25;
+$c-red: #d44429;
 $c-red--light: #ed0505;
 $c-red--dark: darken($c-red, 20%);
-$c-green: #8fcea6;
+$c-green: #058480;
 
 $c-primary: $c-yellow;
 $c-secondary: $c-blue--medium;
 $c-tertiary: $c-red;
+
+// Gradient Colors
+$gradient-red:linear-gradient(45deg, #d64e34 0%, #E8962C 40.14%, #fce524 69.55%);
+$gradient-green:linear-gradient(45deg, #03897f 0%,#01b175 69.55%);
 
 // Social Colors
 $c-blue--twitter: #13c4f8;
