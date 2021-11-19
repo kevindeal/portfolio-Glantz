@@ -24,7 +24,7 @@ $c-blue--light: #2c4989;
 $c-blue--medium: #069;
 $c-red: #d44429;
 $c-red--light: #ed0505;
-$c-red--dark: darken($c-red, 20%);
+$c-red--dark: darken($c-red, 10%);
 $c-green: #058480;
 
 $c-primary: $c-yellow;
@@ -32,8 +32,8 @@ $c-secondary: $c-blue--medium;
 $c-tertiary: $c-red;
 
 // Gradient Colors
-$gradient-red:linear-gradient(45deg, #d64e34 0%, #E8962C 40.14%, #fce524 69.55%);
-$gradient-green:linear-gradient(45deg, #03897f 0%,#01b175 69.55%);
+$gradient-red:linear-gradient(45deg, #d64e34 0%, #e8962c 40.14%, #fce524 69.55%);
+$gradient-green:linear-gradient(45deg, #03897f 0%, #01b175 69.55%);
 
 // Social Colors
 $c-blue--twitter: #13c4f8;
