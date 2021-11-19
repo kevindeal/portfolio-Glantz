@@ -1,9 +1,10 @@
-@mixin o-button($bg-color: $c-black, $color: $c-white, $bg-color-hover: $c-red, $color-hover: $c-white) {
+@mixin o-button($bg-color: $c-red, $color: $c-white, $bg-color-hover: $c-red--dark, $color-hover: $c-white) {
   @include o-heading__secondary--xs;
 
   letter-spacing: $letter-spacing-3;
   font-weight: 400;
   border: none;
+  border-radius: 60px;
   cursor: pointer;
   outline: none;
   display: inline-flex;
