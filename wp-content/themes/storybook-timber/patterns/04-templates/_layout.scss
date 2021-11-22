@@ -6,14 +6,19 @@ $sidebar-width: 300px;
 $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
 
 /**
- * Wrapping element to keep content contained and centered.
+ * Wrapping element to keep content contained.
  */
 .l-wrap {
+  margin: 0 auto;
   padding-left: $space;
   padding-right: $space;
   width: 100%;
+  position: relative;
 
-  @include align-center;
+  @include media(">xxlarge") {
+    padding-left: $space-double;
+    padding-right: $space-double;
+  }
 }
 
 /**
