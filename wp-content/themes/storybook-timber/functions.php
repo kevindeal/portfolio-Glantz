@@ -243,3 +243,157 @@ if (file_exists($register_theme_functions)) {
 // if (file_exists($register_custom_taxonomy)) {
 //   require_once $register_custom_taxonomy;
 // }
+
+/**
+ * ACF Save json files
+ */
+function my_acf_json_save_point($path) {
+  $path = get_stylesheet_directory() . '/acf-json';
+  return $path;
+}
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
+function cptui_register_my_cpts() {
+  
+  
+  
+  
+  /**
+   * Post Type: Team Members.
+   */
+
+
+
+ 
+
+  $labels = array(
+    "name" => __("Portfolio", "sage" ),
+    "singular_name" => __( "Work", "sage" ),
+  );
+  $args = array(
+    "label" => __( "Work", "sage" ),
+    "labels" => $labels,
+    "description" => "Portfolio sites.",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "work",
+    "has_archive" => true,
+    "show_in_menu" => true,
+    "show_in_nav_menus" => true,
+    "exclude_from_search" => false,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "work", "with_front" => true ),
+    'has_archive' => 'portfolio',
+    "query_var" => false,
+    "menu_position" => 4,
+    "menu_icon" => "dashicons-building",
+    "supports" => array( "title", "editor", "thumbnail", "revisions", "excerpt", "link", "image" ),
+    "taxonomies" => array( "work_category", "category", "post_tag" ),
+  );
+  register_post_type( "work", $args );
+}
+add_action( 'init', 'cptui_register_my_cpts', 0 );  
+
+
+
+/* ------------------------------------ *\
+    $TAXONOMIES
+\* ------------------------------------ */
+function cptui_register_my_taxes() {
+  /**
+   * Taxonomy: Dish Types.
+   */
+  $labels = array(
+    "name" => __( "Team Category", "sage" ),
+    "singular_name" => __( "Team Category", "sage" ),
+  );
+  $args = array(
+    "label" => __("Team Category", "sage" ),
+    "labels" => $labels,
+    "public" => true,
+    "hierarchical" => true,
+    "show_ui" => true,
+    "show_in_menu" => true,
+    "show_in_nav_menus" => false,
+    "query_var" => true,
+    "rewrite" => array( 'slug' => 'team_category', 'with_front' => true, ),
+    "show_admin_column" => true,
+    "show_in_quick_edit" => true,
+    'show_in_rest' => true,
+  );
+  register_taxonomy("team_category", array( "team" ), $args );
+}
+add_action( 'init', 'cptui_register_my_taxes' );
+
+function cptui_register_team_tags() {
+  /**
+   * Taxonomy: Dish Types.
+   */
+  $labels = array(
+    "name" => __( "Team Tags", "sage" ),
+    "singular_name" => __( "Team Tag", "sage" ),
+  );
+  $args = array(
+    "label" => __("Team Tag", "sage" ),
+    "labels" => $labels,
+    "public" => true,
+    "hierarchical" => true,
+    "show_ui" => true,
+    "show_in_menu" => true,
+    "show_in_nav_menus" => false,
+    "query_var" => true,
+    "rewrite" => array( 'slug' => 'team_tag', 'with_front' => true, ),
+    "show_admin_column" => true,
+    "show_in_quick_edit" => true,
+    'show_in_rest' => true,
+  );
+  register_taxonomy("team_tag", array( "team" ), $args );
+}
+add_action( 'init', 'cptui_register_team_tags' );
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+}
+
+add_filter( 'timber_context', 'mytheme_timber_context'  );
+
+function mytheme_timber_context( $context ) {
+  $context['options'] = get_fields('option');
+  $context['primary_menu']  = new Timber\Menu('primary');
+  $context['utility_menu']  = new Timber\Menu('utility');
+  return $context;
+}
+
+add_filter('get_the_archive_title', 'modify_archive_title');
+function modify_archive_title($title)
+{
+  if (is_category()) {
+    $title = single_cat_title('', false);
+  }
+  return $title;
+} 
