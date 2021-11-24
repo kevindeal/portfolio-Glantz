@@ -1,0 +1,15 @@
+{% extends "@templates/_layout.twig" %}
+
+{% block content %}
+  {% include "@organisms/content/content.twig" %}
+  {% include "@molecules/heroes/hero.twig" %}
+  <section>
+    {% include "@molecules/components/content-modules/intro_section.twig" %}
+  </section>
+{% endblock %}
+
+{% block sections_after %}
+  {% include "@organisms/sections/page-sections.twig" %}
+{% endblock %}
+
+  

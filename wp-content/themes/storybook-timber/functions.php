@@ -243,3 +243,13 @@ if (file_exists($register_theme_functions)) {
 // if (file_exists($register_custom_taxonomy)) {
 //   require_once $register_custom_taxonomy;
 // }
+
+/**
+ * ACF Save json files
+ */
+function my_acf_json_save_point($path) {
+  $path = get_stylesheet_directory() . '/acf-json';
+  return $path;
+}
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+

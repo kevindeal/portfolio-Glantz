@@ -19,6 +19,14 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
     padding-left: $space-double;
     padding-right: $space-double;
   }
+
+  &-centered {
+    padding-left: $space;
+    padding-right: $space;
+    width: 100%;
+
+    @include align-center;
+  }
 }
 
 /**
@@ -27,7 +35,7 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
  */
 
 .l-container {
-  @include align-center;
+  // @include align-center;
 
   max-width: $max-width;
 
