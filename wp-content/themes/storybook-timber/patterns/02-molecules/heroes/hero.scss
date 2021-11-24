@@ -1,0 +1,20 @@
+/* ------------------------------------ *\
+    $HERO STYLES
+\* ------------------------------------ */
+
+.c-hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 25vh;
+  width: 100%;
+  color: $c-white;
+
+  &-title {
+    position: absolute;
+    line-height: 100px;
+    width: 45%;
+    top: 150px;
+    font-size: $font-size-xxxl;
+  }
+}
