@@ -24,9 +24,6 @@
         } %}
       </div>
       <div class="{{ bem_classes(content_base_class, 'body') }}">
-        {# <pre>
-          {{ dump(post) }}
-        </pre> #}
         {% include "@atoms/text/rich-text/rich-text.twig" with {
           "rich_text": {
             "text": post.content
