@@ -13,7 +13,7 @@ html {
 body {
   background: $c-white;
   font-size: $body-font-size;
-  color: $c-gray--darkest;
+  color: $c-black;
 
   @include body-copy;
 }

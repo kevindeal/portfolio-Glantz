@@ -1,8 +1,20 @@
 .o-eyebrow {
   display: inline-block;
-  color: $c-blue--medium;
+  color: $c-green;
   font-family: $font-secondary;
   font-size: $font-size-xs;
   font-weight: bold;
   margin-top: $space-half;
+  text-transform: uppercase;
+
+  &--white {
+    color: $c-white;
+    display: inline-block;
+    font-family: $font-secondary;
+    font-size: $font-size-xs;
+    font-weight: bold;
+    margin-top: $space-half;
+    text-transform: uppercase;
+  }
 }
+
