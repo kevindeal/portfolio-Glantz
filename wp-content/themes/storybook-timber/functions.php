@@ -231,10 +231,10 @@ if (file_exists($register_theme_functions)) {
 /**
  * Register Custom Post Types.
  */
-// $register_custom_content_types = __DIR__.'/functions/custom-content-types.php';
-// if (file_exists($register_custom_content_types)) {
-//   require_once $register_custom_content_types;
-// }
+$register_custom_content_types = __DIR__.'/functions/custom-content-types.php';
+if (file_exists($register_custom_content_types)) {
+  require_once $register_custom_content_types;
+}
 
 /**
  * Register Custom Taxonomies.
@@ -252,4 +252,3 @@ function my_acf_json_save_point($path) {
   return $path;
 }
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
-

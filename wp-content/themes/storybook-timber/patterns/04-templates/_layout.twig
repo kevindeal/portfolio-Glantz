@@ -10,6 +10,7 @@
   <body class="body{{ ' ' ~ body_class }}" data-template="base.twig">
     <a class="skip-link screen-reader-text visually-hidden" href="#content">Skip to content</a>
     {% include "@organisms/global/header/header.twig" %}
+    {% include "@molecules/navigation/header/header-nav.twig" %}
     {% block sections_before %}{% endblock %}
     <main role="document" class="{{ bem_classes(layout_base_class, layout.element, layout.modifiers,) }}">
       {% block content %}{% endblock %}
