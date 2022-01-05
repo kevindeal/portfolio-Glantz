@@ -33,6 +33,32 @@
   }
 }
 
+@mixin o-button--arrow {
+  @include o-button($c-red, $c-red--dark);
+
+  letter-spacing: $letter-spacing-1;
+  font-weight: 500;
+  border: none;
+  align-items: left;
+  justify-content: left;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: left;
+  background-color: $c-white;
+  padding: 0;
+  transition: $transition-all;
+
+  &:focus,
+  &:hover {
+    color: $c-red;
+    background-color: $c-white;
+  }
+
+  svg {
+    margin-left: $space-half;
+  }
+}
+
 @mixin o-button--alt {
   @include o-button($c-white, $c-black, $c-white, $c-red);
 
@@ -57,5 +83,9 @@
 
   &--small {
     @include o-button--small;
+  }
+
+  &--arrow {
+    @include o-button--arrow;
   }
 }
