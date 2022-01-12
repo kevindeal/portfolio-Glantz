@@ -46,7 +46,7 @@ function cptui_register_my_cpts() {
     "menu_position" => 4,
     "menu_icon" => "dashicons-building",
     "supports" => array( "title", "editor", "thumbnail", "revisions", "excerpt", "link", "image" ),
-    "taxonomies" => array( "work_category", "category", "post_tag" ),
+    "taxonomies" => array( "work_category", "work_tag" ),
   );
   register_post_type( "work", $args );
 }

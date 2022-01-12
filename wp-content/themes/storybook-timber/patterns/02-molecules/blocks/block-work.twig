@@ -1,0 +1,18 @@
+{% block content %}
+  <div clas="c-card__work c-block">
+    {% if block_image %}
+      <a href="{{ block_link }}">
+        <picture class="c-card__work-image c-block__image u-overlay--hover">
+          <img src="{{ block_image|resize(600,450) }}" alt="{{ block_image_alt }}" />
+        </picture>
+      </a>
+    {% endif %}
+    <div class="c-card__work-content c-block__content">
+      {% for cat in block_categories %}
+        <span class="c-block__category">{{ cat.title }}{% if not loop.last %},&nbsp;{% endif %}</span>
+      {% endfor %}
+      <h3 class="c-card__work-title u-padding--half--top u-padding--half--bottom"><a href="{{ block_link }}">{{ block_title }}</a></h3>
+      <p class="c-card__work-body u-font--m">{{ block_preview }}</p>
+    </div>
+  </div>
+{% endblock %}

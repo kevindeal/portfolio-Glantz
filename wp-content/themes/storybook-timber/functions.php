@@ -252,3 +252,11 @@ function my_acf_json_save_point($path) {
   return $path;
 }
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
+/**
+ * Add breadcrumbs
+ */
+// if(function_exists('yoast_breadcrumb')) {
+//   function breadcrumbs($before = '', $after = '') { return yoast_breadcrumb($before, $after, false); };
+//   TimberHelper::function_wrapper('breadcrumbs');
+// }
