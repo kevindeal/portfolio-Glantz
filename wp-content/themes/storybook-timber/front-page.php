@@ -25,6 +25,7 @@
 $context = Timber::context();
 $post = new TimberPost();
 $context['post'] = $post;
+$context['work_posts'] = Timber::get_posts('post_type=work');
 $context['is_front_page'] = 'true';
 $templates = array(
   'patterns/05-pages/page-types/page-' . $post->post_name . '.twig',

@@ -1,0 +1,26 @@
+{% set section_work_base_class = section_work.base_class|default('c-section-work') %}
+
+<section class="{{ bem_classes(section_work_base_class, section_work.element, section_work.modifiers, section_work.extra ) }}">
+  <div class="c-posts">
+    <div class="c-section-heading u-center-align">
+      <h1 class="o-eyebrow"> my work</h1>
+      <h2>Some of my most proud work</h1>
+    </div>
+    <div class="l-grid l-grid--3up">
+      {% for post in work_posts %}
+        <div class="l-grid-item">
+          {% 
+            include '@molecules/blocks/block-work.twig' with {
+              "block_image": post.thumbnail.src('large'),
+              "block_image_alt": post.thumbnail ? post.thumbnail.alt,
+              "block_title": post.title,
+              "block_link": post.link,
+              "block_preview": post.preview,
+              "block_categories": post.categories
+            }
+          %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
