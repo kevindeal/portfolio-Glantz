@@ -10,7 +10,7 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
  */
 .l-wrap {
   margin: 0 auto;
-  padding-left: $space;
+  padding-left: $space-quadruple;
   padding-right: $space;
   width: 100%;
   position: relative;
@@ -36,7 +36,9 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
 
 .l-container {
   // @include align-center;
-
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   max-width: $max-width;
 
   &--m {

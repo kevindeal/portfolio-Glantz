@@ -45,6 +45,10 @@
   flex-direction: column;
 }
 
+.u-align-center {
+  text-align: center;
+}
+
 // Specific Widths - visible greater than #
 .u-hide-until--s {
   @include media("<=small") {

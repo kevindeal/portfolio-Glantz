@@ -131,12 +131,12 @@ $small: 500px;
 $medium: 720px;
 $large: 960px;
 $xlarge: 1220px;
-$xxlarge: 1440px;
+$xxlarge: 1400px;
 
 $breakpoints: ("xsmall": $xsmall, "small": $small, "medium": $medium, "large": $large, "xlarge": $xlarge, "xxlarge": $xxlarge);
 
 // Max Width
-$max-width: $xlarge;
+$max-width: $xxlarge;
 $max-width-m: $medium;
 $max-width-l: $large;
 $max-width-xl: $xlarge;
