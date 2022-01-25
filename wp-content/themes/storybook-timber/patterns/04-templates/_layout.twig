@@ -8,6 +8,11 @@
 <html class="no-js no-svg" {{ site.language_attributes }}>
   {% include "@templates/_head.twig" %}
   <body class="body{{ ' ' ~ body_class }}" data-template="base.twig">
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
     <a class="skip-link screen-reader-text visually-hidden" href="#content">Skip to content</a>
     {% include "@organisms/global/header/header.twig" %}
     {% include "@molecules/navigation/header/header-nav.twig" %}

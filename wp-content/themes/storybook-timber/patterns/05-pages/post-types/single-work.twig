@@ -16,27 +16,13 @@
 
 {% block content %}
 
-<article class="l-article l-article--{{ post.post_type }} c-work">
+<article class="l-article l-article--{{ post.post_type }} l-container c-work">
   <div class="c-work__hero u-background-color--white">
     <div class="c-work__hero--content">
-    {% include "@molecules/components/content-modules/intro-section/intro_section.twig" %}
-      <div bp="6@md">
-        <h1 class="c-work__hero--title">{{ post.title }}</h1>
-        {% if website %}
-          <a class="c-work__hero--website" href="{{ website }}" {% if post.meta('open_in_new_tab') %}target="_blank"{% endif %}
-          >{{ website }}</a>
-        {% endif %}
-        {% if post.content %}
-          <div class="c-work__hero--body">{{ post.content }}</div>
-        {% endif %}
-      </div>
-      {% if post.thumbnail.src %}
-        <div bp="6@md" class="c-work__hero--image">
-          {% if website %}<a href="{{ website }}" target="_blank">{% endif %}
-            <img src="{{ post.thumbnail.src|towebp }}">
-          {% if website %}</a>{% endif %}
-        </div>
-      {% endif %}
+      {% include "@molecules/components/content-modules/intro-section/intro_section.twig" %}
+    </div>
+    <div>
+      {% include "@molecules/components/content-modules/slider/slider.twig" %}
     </div>
   </div>
 </article>

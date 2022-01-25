@@ -1,0 +1,30 @@
+.c-slider {
+  &__carousel {
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .c-intro-section {
+    margin: 0 auto;
+  }
+}
+
+.slick-slide {
+  margin: $space $space $space 0px;
+  height: auto;
+
+  img {
+    width: 100%;
+    border: 2px solid $c-white;
+  }
+}
+
+.slick-dots li button::before {
+  font-size: 20px;
+  color: $c-gray;
+}
+
+.slick-dots li.slick-active button::before {
+  opacity: 0.95;
+  color: $c-red;
+}

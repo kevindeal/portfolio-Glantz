@@ -1,0 +1,21 @@
+<div class="c-slider">
+  <div class="c-intro-section" bp="grid">
+    <p class="c-intro-content u-padding--double--bottom" bp="6@md offset-4@md">{{ post.intro_section }}</p>
+  </div>
+  <div class="c-slider__carousel">
+    {% for image in post.meta('image_gallery') %}
+     <div><img src="{{ Image(image) }}" alt="{{ Image(image.alt) }}"></div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.c-slider__carousel').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: true,
+    });
+  });
+</script>
