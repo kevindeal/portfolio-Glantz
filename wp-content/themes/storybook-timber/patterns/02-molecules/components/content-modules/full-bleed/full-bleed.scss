@@ -1,0 +1,25 @@
+.c-full-bleed {
+  .l-grid-item:nth-child(odd) {
+    margin-top: $space;
+  }
+
+  &__image {
+    box-shadow: $box-shadow--thick;
+  }
+
+  &__wrap {
+    width: 100vw;
+    position: relative;
+    top: 360px;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  &__screenshot {
+    position: relative;
+    top: -360px;
+  }
+}
+
