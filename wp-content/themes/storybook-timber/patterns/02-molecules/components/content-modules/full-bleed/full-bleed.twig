@@ -1,0 +1,24 @@
+<div class="c-full-bleed u-padding--quad--top u-padding--quad--bottom" >
+  <div class="c-full-bleed__intro" bp="grid">
+    {% for site_intro in post.meta('site_intro') %}
+      {% if item in site_intro %}
+        <div class="c-site__intro u-padding--quad--bottom" bp="6@md offset-4@md">
+          <h3 class="u-padding--half--bottom">{{ site_intro.intro_heading }}</h3>
+          <p>{{ site_intro.intro_description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="c-full-bleed__wrap u-background--{{ post.background_color }}" style="background-color:{{ post.background_color }}">
+    <div class="c-full-bleed__screenshot">
+      <div class="l-container" >
+        <div bp="grid gap-none">
+          {% for image in post.meta('image_screenshot') %}
+            <img class="c-full-bleed__image c-image-{{ Image(image).title }} l-grid-item" bp="6" src="{{ Image(image).src }}" alt="{{ Image(image).alt }}" />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

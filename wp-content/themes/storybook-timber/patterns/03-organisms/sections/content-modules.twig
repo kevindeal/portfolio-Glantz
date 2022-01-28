@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Basic content modules used for various pages and post types.
+ * controls content in layout builders
+ */
+#}
+
+{% for item in post.meta('content_modules') %}
+  {% include '01-molecules/components/content-modules/' ~ item.acf_fc_layout ~ '.twig' %}
+{% endfor %}

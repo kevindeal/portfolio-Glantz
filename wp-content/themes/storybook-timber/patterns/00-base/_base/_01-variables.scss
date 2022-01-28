@@ -131,12 +131,12 @@ $small: 500px;
 $medium: 720px;
 $large: 960px;
 $xlarge: 1220px;
-$xxlarge: 1400px;
+$xxlarge: 1440px;
 
 $breakpoints: ("xsmall": $xsmall, "small": $small, "medium": $medium, "large": $large, "xlarge": $xlarge, "xxlarge": $xxlarge);
 
 // Max Width
-$max-width: $xxlarge;
+$max-width: $xlarge;
 $max-width-m: $medium;
 $max-width-l: $large;
 $max-width-xl: $xlarge;
@@ -162,8 +162,9 @@ $border--standard-light: 1px solid $c-gray--light;
 $border--standard-lightest: 1px solid $c-gray--lightest;
 $border--dotted: 1px dashed $c-gray;
 $border--thick: 6px solid $c-warning;
-$box-shadow--small: 0 0 5px rgba($c-black, 0.3);
-$box-shadow--standard: 0 0 15px rgba($c-black, 0.15);
+$box-shadow--small: 0 0 5px rgba($c-black, 0.08);
+$box-shadow--standard: 0px 13px 40px rgba($c-black, 0.3);
+$box-shadow--thick: 0px 8px 24px rgba($c-black, 0.6);
 $outline: 3px solid $c-primary;
 
 /**

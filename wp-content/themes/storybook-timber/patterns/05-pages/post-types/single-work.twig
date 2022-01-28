@@ -11,6 +11,7 @@
 {% set website = post.meta('company_url') %}
 {% set founder_details = post.meta('founder_details') %}
 {% set founder_year = founder_details.founding_year %}
+{% set site_intro = post.meta('full_bleed') %}
 
 {# ----- Build Data ----- #}
 
@@ -23,6 +24,9 @@
     </div>
     <div>
       {% include "@molecules/components/content-modules/slider/slider.twig" %}
+    </div>
+    <div>
+      {% include "@molecules/components/content-modules/full-bleed/full-bleed.twig" %}
     </div>
   </div>
 </article>
