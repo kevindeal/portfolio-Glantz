@@ -2,7 +2,7 @@
   <div class="c-full-bleed__intro" bp="grid">
     {% for site_intro in post.meta('site_intro') %}
       {% if item in site_intro %}
-        <div class="c-site__intro u-padding--quad--bottom" bp="6@md offset-4@md">
+        <div class="c-site__intro u-padding--sext--bottom" bp="6@md offset-4@md">
           <h3 class="u-padding--half--bottom">{{ site_intro.intro_heading }}</h3>
           <p>{{ site_intro.intro_description }}</p>
         </div>

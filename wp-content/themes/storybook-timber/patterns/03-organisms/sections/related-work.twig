@@ -1,0 +1,21 @@
+<div class="c-related__{{ post.post_type }}--grid u-padding--double--top u-padding--quad--bottom">
+  <div class="u-align-center">
+    <h2 class="o-eyebrow">Similar posts</h2>
+  </div>
+  <div bp="grid">
+    {% for item in Post(related) %}
+      <div class="c-card__work" bp="6">
+        <a href="{{ item.link }}">
+          <picture class="c-card__work-image c-block__image u-overlay--hover u-padding--half--bottom
+          u-padding--half--top">
+            <img src="{{ item.thumbnail|resize(600,450) }}" alt="{{ item.thumbnail.alt }}" />
+          </picture>
+        </a>
+        <a href="{{ item.link }}">
+          <h3>{{ item.post_title }}</h3>
+          <p>{{ item.post_content }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
