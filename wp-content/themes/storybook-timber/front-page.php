@@ -24,6 +24,18 @@
 
 $context = Timber::context();
 $post = new TimberPost();
+$context['posts'] = Timber::get_posts( array(
+  'post_parent' => 0
+) );
+$posts = Timber::get_posts();
+
+$filtered = array();
+foreach ( $posts as $post ) {
+  if ($post->post_parent === 0) {
+    $filtered[] = $post;
+  }
+}
+$context['posts'] = $filtered;
 $context['post'] = $post;
 $context['work_posts'] = Timber::get_posts('post_type=work');
 $context['is_front_page'] = 'true';

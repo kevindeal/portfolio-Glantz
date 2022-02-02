@@ -10,12 +10,11 @@
 }
 
 .slick-slide {
-  margin: $space $space $space 0px;
+  margin: $space $space $space 0;
   height: auto;
 
   img {
     width: 100%;
-    border: 2px solid $c-white;
   }
 }
 
