@@ -11,10 +11,11 @@
   color: $c-white;
 
   &-title {
-    position: absolute;
+    position: relative;
+    color: $c-white;
     line-height: 100px;
-    width: 45%;
-    top: 150px;
+    top: -600;
+    width: 50%;
     font-size: $font-size-xxxl;
   }
 }
