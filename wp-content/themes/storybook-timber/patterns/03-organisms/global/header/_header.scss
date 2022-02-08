@@ -1,9 +1,9 @@
 .c-header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 10px;
   z-index: 997;
-  background-color: $c-white;
-  border-bottom: $border--standard-light;
+  width: 100vw;
+  background-color: transparent;
 
   &--inner {
     padding: 0 $space-half 0 $space;
@@ -30,7 +30,7 @@
   }
 
   &__logo {
-    width: 150px;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,32 +59,32 @@
     padding: $space-half;
   }
 
-  button {
-    margin: 0;
-    border: 0;
-    outline: 0;
-    border-radius: 0;
-    background-color: transparent;
+  // button {
+  //   margin: 0;
+  //   border: 0;
+  //   outline: 0;
+  //   border-radius: 0;
+  //   background-color: transparent;
 
-    .o-icon {
-      transition: $transition-all;
-      transform: scale(1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $c-black;
-    }
+  //   .o-icon {
+  //     transition: $transition-all;
+  //     transform: scale(1);
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     color: $c-black;
+  //   }
 
-    &:hover,
-    &:focus {
-      background-color: transparent;
+  //   &:hover,
+  //   &:focus {
+  //     background-color: transparent;
 
-      .o-icon {
-        transform: scale(1.1);
-        color: $c-red;
-      }
-    }
-  }
+  //     .o-icon {
+  //       transform: scale(1.1);
+  //       color: $c-red;
+  //     }
+  //   }
+  // }
 }
 
 body.has-simple-header {
@@ -120,53 +120,6 @@ body.has-simple-header {
 
     &__icon-menu {
       display: flex;
-    }
-  }
-
-  .c-header-nav {
-    right: -400px;
-    position: fixed;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100vh;
-    width: 80vw;
-    max-width: 400px;
-    background-color: $c-yellow;
-
-    &__list {
-      flex-direction: column;
-      height: auto;
-      width: 100%;
-    }
-
-    &__item {
-      padding: 0 $space-double;
-    }
-
-    &__link {
-      padding: $space 0;
-      justify-content: flex-start;
-      text-align: left;
-      width: 100%;
-      border-bottom: 1px solid darken($c-yellow, 5%);
-    }
-
-    &__icon-close {
-      display: flex;
-    }
-  }
-
-  &.menu-is-active {
-    overflow: hidden;
-
-    .c-header::before {
-      opacity: 1;
-      visibility: visible;
-      z-index: 998;
-    }
-
-    .c-header-nav {
-      right: 0;
     }
   }
 }
