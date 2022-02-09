@@ -27,8 +27,8 @@
  * Zennat Pro One - Used on the "Naked and Afraid" flex layout feature.
  */
 @font-face {
-  font-family: 'Zennat Pro One';
-  src: url("../00-base/fonts/ZennatProOne.woff2") format("woff2"), url("../00-base/fonts/ZennatProOne.woff") format("woff"), url("../00-base/fonts/ZennatProOne.ttf") format("truetype");
+  font-family: 'Rubik', sans-serif;
+  src: url("../00-base/fonts/Rubik-Regular.ttf") format("ttf"), url("../00-base/fonts/Rubik-Regular.ttf") format("ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -36,9 +36,9 @@
 }
 
 // Fonts
-$font-primary: "Guardian Egyptian Web", Georgia, serif;
-$font-secondary: "HelveticaNeue", Arial, Helvetica, Geneva, sans-serif;
-$font-tertiary: Georgia, serif;
+$font-primary: "Rubik", Georgia, sans-serif;
+$font-secondary: "Rubik", Arial, Helvetica, Geneva, sans-serif;
+$font-tertiary: "Rubik", Georgia, sans-serif;
 $font-body: $font-primary;
 
 /**
