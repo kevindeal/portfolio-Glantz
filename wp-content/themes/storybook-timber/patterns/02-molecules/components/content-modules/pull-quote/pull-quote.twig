@@ -3,7 +3,7 @@
     <div class="c-pullquote__image u-padding--half--bottom">
       {% for pull_quote in post.meta('pull_quote') %}
         <div>
-          <img src="{{ Image(pull_quote.quote_image) }}" alt="">
+          <img src="{{ Image(pull_quote.quote_image) }}" alt="{{ Image(pull_quote.quote_image.alt) }}">
         </div>
       {% endfor %}
     </div>
