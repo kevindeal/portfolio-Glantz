@@ -30,10 +30,10 @@ h6 {
 @mixin o-heading__primary--xxl {
   font-family: $font-primary;
   font-size: $font-size-xxl;
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 700;
+  font-style: bold;
   letter-spacing: $letter-spacing-1;
-  line-height: 1.2;
+  line-height: 1.05;
 
   @include o-heading-link(currentColor, $c-red);
 }
@@ -125,7 +125,7 @@ h3 {
   font-size: $font-size-xl;
   font-weight: 600;
   font-style: normal;
-  line-height: 1.3;
+  line-height: 1.2;
   letter-spacing: $letter-spacing-1;
   text-transform: uppercase;
 }
@@ -136,10 +136,10 @@ h3 {
 
 @mixin o-heading__secondary--l {
   font-family: $font-secondary;
-  font-size: $font-size-l;
+  font-size: $font-size-xl;
   font-weight: 600;
   font-style: normal;
-  line-height: $line-height-s;
+  line-height: 1.2;
   letter-spacing: $letter-spacing-1;
 }
 
