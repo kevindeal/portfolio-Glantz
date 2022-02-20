@@ -4647,6 +4647,15 @@ h3 a:focus {
   letter-spacing: 1px;
 }
 
+.o-heading__secondary--s {
+  font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
+  font-size: var(--font-size-s, 15px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
 .o-heading__secondary--xs {
   font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
   font-size: var(--font-size-xs, 12px);
@@ -6081,6 +6090,13 @@ small a:hover, small a:focus,
   padding: 200px;
 }
 
+.c-pullquote__image img {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
 .c-slider__carousel {
   width: 100%;
   margin: 0px auto;
@@ -6659,23 +6675,31 @@ body.has-simple-header .c-header__icon-menu {
  */
 .l-wrap {
   margin: 0 auto;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
   position: relative;
 }
 
 @media (min-width: 1441px) {
   .l-wrap {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 
 .l-wrap-centered {
   margin: 0 auto;
-  width: 40%;
+  padding-left: 40px;
+  padding-right: 40px;
   text-align: center;
+}
+
+@media (min-width: 1441px) {
+  .l-wrap-centered {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
 }
 
 /**
@@ -6683,6 +6707,7 @@ body.has-simple-header .c-header__icon-menu {
  * adjusts left and right padding as the viewport widens.
  */
 .l-container {
+  padding-top: 40px;
   margin-left: auto;
   margin-right: auto;
   position: relative;

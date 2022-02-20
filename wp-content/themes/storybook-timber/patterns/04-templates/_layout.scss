@@ -10,21 +10,26 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
  */
 .l-wrap {
   margin: 0 auto;
-  padding-left: $space-quadruple;
-  padding-right: $space-quadruple;
+  padding-left: $space-half;
+  padding-right: $space-half;
   width: 100%;
   position: relative;
 
   @include media(">xxlarge") {
-    padding-left: $space-double;
-    padding-right: $space-double;
+    padding-left: $space-quadruple;
+    padding-right: $space-quadruple;
   }
 
   &-centered {
     margin: 0 auto;
-    width: 40%;
-
+    padding-left: $space;
+    padding-right: $space;
     @include align-center;
+
+    @include media(">xxlarge") {
+      padding-left: $space-quadruple;
+      padding-right: $space-quadruple;
+    }
   }
 }
 
@@ -34,6 +39,7 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
  */
 
 .l-container {
+  padding-top: $space;
   margin-left: auto;
   margin-right: auto;
   position: relative;
