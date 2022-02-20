@@ -4,7 +4,7 @@
     <h2 class="c-cta-eyebrow o-eyebrow--white u-padding--half--bottom">{{ post.cta_eyebrow }}</h2>
     <h3 class="o-heading__primary--l u-padding--bottom">{{ post.cta_title }}</h3>
     {% if post.cta_text %}
-    <a href="{{ post.cta_url }}" class="o-button{{ ' ' ~ button.class }}" target="{{ cta.target ? button.target : '_self' }}">{{ post.cta_text}}</a>
+    <a href="{{ post.cta_url.url }}" class="o-button{{ ' ' ~ button.class }}" target="{{ cta.target ? button.target : '_blank' }}">{{ post.cta_text}}</a>
     {% endif %}
   </div>
 </div>
