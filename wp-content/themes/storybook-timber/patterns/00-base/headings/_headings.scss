@@ -147,6 +147,16 @@ h3 {
   @include o-heading__secondary--l;
 }
 
+@mixin o-heading__secondary--s {
+  font-family: $font-secondary;
+  font-size: $font-size-m;
+  font-weight: 500;
+  font-style: normal;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing-1;
+  text-transform: uppercase;
+}
+
 @mixin o-heading__secondary--xs {
   font-family: $font-secondary;
   font-size: $font-size-xs;

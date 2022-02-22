@@ -1,26 +1,38 @@
 {% set footer_base_class = footer.base_class|default('c-footer') %}
 
 <footer class="{{ bem_classes(footer_base_class) }} js-footer no-print" role="contentinfo">
-  <div class="{{ footer_base_class ~ '--inner' }} l-container u-spacing--double">
+  <div class="{{ footer_base_class ~ '--inner' }} l-container">
     <div class="{{ bem_classes(footer_base_class, 'grid') }}" bp="grid">
-      <div class="{{ bem_classes(footer_base_class, 'menu') }}" bp="9@md">
+      <div class="{{ bem_classes(footer_base_class, 'logo') }}" bp="4@md">
+        <div class="o-logo">
+         {% include "/dist/images/logo-red.svg" with {
+            "logo": {
+              "img": {
+                "src": logo_src,
+                "alt": logo_alt,
+              },
+              "link": logo_link
+            }
+          } %}
+        </div>
+        <p>I am an award winning freelance front-end developer. I have been able to use my front-end coding skills, wordpress and strategy to bring solutions to some great brands.<br> Located in philly in a jawn near you.</p>
+      </div>
+      <div class="{{ bem_classes(footer_base_class, 'menu') }}" bp="4@md">
         {% include "@molecules/navigation/footer/footer-nav.twig" %}
       </div>
-      <div class="{{ bem_classes(footer_base_class, 'social') }}" bp="3@md">
-        {% include "@molecules/components/social/social-links/social-links.twig" %}
+      <div class="{{ bem_classes(footer_base_class, 'social') }}" bp="4@md">
+        <h3 class="o-eyebrow">Get in touch</h3>
+        <a class="c-footer-email o-link--alt"href="mailto:kevin@julyfivedesign.com"><p>kevin@julyfivedesign.com</p></a>
+        <p>Philadelphia,Pa</p>
+        <div class="u-padding--top">{% include "@molecules/components/social/social-links/social-links.twig" %}</div>
+        <a class="o-button--alt u-space--half--top" href="https://calendly.com/kevin-deal/30min">Let's connect</a> 
       </div>
     </div>
     <div class="{{ bem_classes(footer_base_class, 'copyright') }}">
-      {% include "@atoms/images/logos/logo.twig" with {
-        "logo": {
-          "img": {
-            "src": logo_src,
-            "alt": logo_alt,
-          },
-          "link": logo_link
-        }
-      } %}
       <span class="o-copyright o-small">{{ copyright }}</span>
+      <div>
+        <p class="u-padding--top">&copy;2022 Kevin Deal For Glantz Wordpress devloper.</p>
+      </div>   
     </div>
   </div>
 </footer>
