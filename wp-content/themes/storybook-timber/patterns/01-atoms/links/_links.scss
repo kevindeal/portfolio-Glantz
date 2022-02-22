@@ -55,11 +55,13 @@
 }
 
 @mixin o-link--alt {
-  @include o-link($c-gray--darker, $c-red);
+  @include o-link($c-red, $c-red);
 
   @include o-heading__secondary--xs;
 
+  font-weight: 500px;
   box-shadow: none;
+  text-transform: capitalize;
 
   &:hover,
   &:focus {

@@ -1,8 +1,8 @@
 .c-social-links {
   display: flex;
   flex-direction: row;
-  margin-left: -$space-half;
-  margin-right: -$space-half;
+  margin-left: -$space-third;
+  margin-right: -$space-third;
 
   &__item {
     padding: 8px $space-half;
@@ -10,12 +10,12 @@
     align-items: center;
     justify-content: center;
     box-shadow: none;
-    color: $c-gray;
+    color: $c-red;
 
     &:hover,
     &:focus {
       box-shadow: none;
-      color: $c-black;
+      color: $c-blue;
     }
   }
 }
