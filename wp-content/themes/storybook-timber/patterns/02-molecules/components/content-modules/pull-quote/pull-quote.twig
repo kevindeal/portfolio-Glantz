@@ -1,0 +1,20 @@
+<section class="c-pullquote l-container">
+  <div class="l-wrap-centered u-padding--double--bottom">
+    <div class="c-pullquote__image u-padding--half--bottom">
+      {% for pull_quote in post.meta('pull_quote') %}
+        <div>
+          <img src="{{ Image(pull_quote.quote_image) }}" alt="{{ Image(pull_quote.quote_image.alt) }}">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="c-pullquote__content">
+      {% for pull_quote in post.meta('pull_quote') %}
+        <blockquote>
+          <p class="c-pullquote__text u-padding--half--bottom">{{pull_quote.quote_text}}</p>
+        </blockquote>
+          <h3>{{ pull_quote.quote_author }}</h3>
+          <h4 class="c-pullquote__title o-heading__secondary--s">{{ pull_quote.author_title }}</h4>
+      {% endfor %}
+    </div>
+  </div>
+</section>
