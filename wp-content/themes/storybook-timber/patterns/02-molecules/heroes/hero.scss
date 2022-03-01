@@ -6,9 +6,13 @@
   position: relative;
   top: 0;
   left: 0;
-  min-height: 25vh;
+  min-height: 30vh;
   width: 100%;
   color: $c-white;
+
+  @include media("<medium") {
+    text-align: center;
+  }
 
   &-title {
     position: absolute;
@@ -17,5 +21,12 @@
     top: -600;
     width: 70%;
     font-size: $font-size-xxxl;
+
+    @include media("<medium") {
+      font-size: $font-size-xxxl;
+      font-weight: 700;
+      line-height: 1.05;
+      width: 100%;
+    }
   }
 }
