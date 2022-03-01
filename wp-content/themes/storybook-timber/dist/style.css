@@ -6251,25 +6251,34 @@ small a:hover, small a:focus,
     $HERO STYLES
 \* ------------------------------------ */
 .c-hero {
-  position: relative;
-  top: 0;
-  left: 0;
-  min-height: 30vh;
+  height: 1000px;
+  max-height: 60vh;
   width: 100%;
   color: #fff;
+}
+
+.c-hero span {
+  position: absolute;
+  top: -10;
+  left: 0;
 }
 
 @media (max-width: 719px) {
   .c-hero {
     text-align: center;
+    max-height: 35vh;
+  }
+  .c-hero span {
+    top: -160;
+    left: 0;
   }
 }
 
 .c-hero-title {
-  position: absolute;
+  position: relative;
   color: #fff;
   line-height: 100px;
-  top: -600;
+  top: 60;
   width: 70%;
   font-size: var(--font-size-xxxl, 90px);
 }
