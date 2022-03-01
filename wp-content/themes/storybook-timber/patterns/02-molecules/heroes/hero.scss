@@ -23,7 +23,6 @@
     font-size: $font-size-xxxl;
 
     @include media("<medium") {
-      font-size: $font-size-xxxl;
       font-weight: 700;
       line-height: 1.05;
       width: 100%;

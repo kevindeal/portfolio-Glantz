@@ -6276,7 +6276,6 @@ small a:hover, small a:focus,
 
 @media (max-width: 719px) {
   .c-hero-title {
-    font-size: var(--font-size-xxxl, 90px);
     font-weight: 700;
     line-height: 1.05;
     width: 100%;
