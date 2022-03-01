@@ -6104,6 +6104,12 @@ small a:hover, small a:focus,
   }
 }
 
+@media (max-width: 719px) {
+  .c-work__hero--content .c-intro-content {
+    text-align: center;
+  }
+}
+
 .c-pullquote__image img {
   margin: 0 auto;
   width: 80px;

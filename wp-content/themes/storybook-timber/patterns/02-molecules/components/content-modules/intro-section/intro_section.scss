@@ -19,3 +19,13 @@
     }
   }
 }
+
+.c-work__hero--content {
+  .c-intro {
+    &-content {
+      @include media("<medium") {
+        text-align: center;
+      }
+    }
+  }
+}
