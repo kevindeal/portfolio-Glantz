@@ -3,22 +3,32 @@
 \* ------------------------------------ */
 
 .c-hero {
-  position: relative;
-  top: 0;
-  left: 0;
-  min-height: 30vh;
+  height: 1000px;
+  max-height: 70vh;
   width: 100%;
   color: $c-white;
 
+  span {
+    position: absolute;
+    top: -10;
+    left: 0;
+  }
+
   @include media("<medium") {
     text-align: center;
+    max-height: 35vh;
+
+    span {
+      top: -160;
+      left: 0;
+    }
   }
 
   &-title {
-    position: absolute;
+    position: relative;
     color: $c-white;
     line-height: 100px;
-    top: -600;
+    top: 60;
     width: 70%;
     font-size: $font-size-xxxl;
 
