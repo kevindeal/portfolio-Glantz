@@ -1,5 +1,7 @@
 .c-nav-container {
   display: inline-block;
+  position: absolute;
+  width: auto;
 
   button {
     cursor: pointer;
@@ -13,7 +15,14 @@
 // *
 // hamburger styles
 // *
+.c-header__icon-menu {
+  @include media("<large") {
+    display: none;
+  }
+}
+
 .c-hamburger {
+  display: block;
   position: absolute;
   top: -90px;
   right: -45px;
@@ -21,8 +30,12 @@
   height: 180px;
   width: 180px;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 1;
   transition: all 0.3s ease-in-out;
+
+  @include media("<large") {
+    display: none;
+  }
 }
 
 .c-icon-hamburger {
@@ -30,9 +43,13 @@
   z-index: 2;
   position: relative;
   border: none;
-  right: 50%;
+  left: -100%;
   transform: translateX(-50%) translateY(50%);
   bottom: -50%;
+
+  @include media("<medium") {
+    display: none;
+  }
 
   span {
     display: block;
@@ -49,98 +66,95 @@
 // *
 // contents of menu
 // *
-.c-side-nav {
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
+#mobBlob {
+  position: fixed;
   top: 0;
   right: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
+  width: 0;
+  height: 110%;
+  z-index: -9;
   transition: 1s $transition-effect;
 }
 
-.c-header-nav {
-  &__list {
+.c-menu {
+  position: absolute;
+  right: -20;
+  top: -10;
+  height: 100vh;
+  z-index: 3;
+  width: 0;
+  overflow-y: auto;
+  transition: 1s $transition-effect;
+}
+
+.c-side-nav {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  button {
     position: relative;
-    top: 25%;
-    width: 50%;
-    text-align: center;
-    margin-top: $space-and-half;
+    top: auto;
+    right: 0;
   }
 
-  &__item {
+  .c-social-links {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
-    padding: 0 $space-double;
-
-    @include media(">large") {
-      padding: 0 $space-half;
-    }
-  }
-
-  &__link {
-    @include o-heading__secondary--xs;
-
-    letter-spacing: 1px;
-    color: $c-black;
-    padding: $space 0;
-    transition: $transition-all;
-    border-bottom: 1px solid darken($c-yellow, 5%);
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
-    width: 100%;
-    position: relative;
-    box-shadow: none;
+    flex-direction: row;
+    margin-top: $space;
+    margin-left: $space-sextuple;
+    margin-right: -$space-third;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 0;
-      background-color: $c-yellow;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: $transition-all;
-    }
-
-    @include media(">large") {
-      padding: 0;
+    &__item {
+      padding: 8px $space-half;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      text-align: center;
-      width: auto;
-      border: 0;
+      box-shadow: none;
+      color: $c-white;
 
       &:hover,
-      &:focus,
-      &.is-active {
+      &:focus {
         box-shadow: none;
-        color: $c-red;
-
-        &::after {
-          opacity: 1;
-          visibility: visible;
-          height: 3px;
-        }
+        color: $c-black;
       }
     }
+  }
+}
 
+.menu--active {
+  height: 100vh;
+  overflow: hidden;
+  width: 90%;
 
-    &.is-active {
-      color: $c-red;
+  #mobBlob {
+    display: fixed;
+    width: 90%;
+    transition: 1s $transition-effect;
+
+    @include media("<large") {
+      display: none;
     }
   }
 
+  @include media("<large") {
+    width: 40%;
+
+    .c-menu--inner {
+      display: none;
+    }
+  }
+}
+
+.c-header-nav {
   &__icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: flex-end;
     padding: $space $space-double;
-    width: 100%;
     background-color: transparent;
     color: $c-white;
 
@@ -156,30 +170,53 @@
   }
 }
 
-body.menu-is-active {
-  overflow: hidden;
+// contents to memory game
+.game-container {
+  margin: auto;
+  height: 640px;
+  width: 640px;
+  perspective: 1000px;
+  z-index: 9999;
 
-  .c-header::before {
-    opacity: 1;
-    visibility: visible;
-    z-index: 998;
-
-    @include media(">large") {
-      opacity: 0;
-      visibility: hidden;
-      z-index: 0;
-    }
-  }
-
-  .c-header-nav {
-    right: 0;
+  .c-display__header {
+    color: $c-white;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
   }
 }
 
-#mobBlob {
-  position: fixed;
-  top: -10;
-  width: 90%;
-  height: 100vh;
-  z-index: -9;
+.c-memory-card {
+  position: relative;
+  width: calc(25% - 10px);
+  height: calc(33.3333% - 10px);
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+
+  &:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+
+  .c-card {
+    &__front,
+    &__back {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      position: absolute;
+      border-radius: 6px;
+      background: #fdfee8;
+      object-fit: cover;
+      backface-visibility: hidden;
+    }
+
+    &__back {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.c-memory-card.flip {
+  transform: rotateY(180deg);
 }

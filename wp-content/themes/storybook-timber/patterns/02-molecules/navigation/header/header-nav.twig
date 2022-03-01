@@ -1,61 +1,103 @@
 {% set header_nav_base_class = header_nav.base_class|default('c-header-nav') %}
+{% set card_front = "https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/phi.png" %}
+{% set players = [
+  {
+    "name": "Joel",
+    card_back: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203954.png"
+  },
+    {
+    "name": "James",
+    card_back: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201935.png"
+  },
+    {
+    "name": "Tyrese",
+    card_back: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1630178.png"
+  },
+    {
+    "name": "Tobi",
+    card_back: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202699.png"
+  },
+    {
+    "name": "Matisse",
+    card_back: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1629680.png"
+  },
+    {
+    "name": "Danny",
+    card_back: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201980.png"
+  }
+] %}
+
 
 {% if primary_nav.name == "Primary Navigation" %}
   <nav role="navigation" class="{{ bem_classes(header_nav_base_class, header_nav.element, header_nav.modifiers, header_nav.extra) }}">
     <div class="c-nav-container">
-      <div id="menu-cirlce" class="c-hamburger"></div>
-      <button id="open-nav" class="c-icon-hamburger" role="button" aria-pressed="false" aria-label="Open Navigation" onclick="openNav()">
+      <span id="menu-cirlce" class="c-hamburger"></span>
+      <button id="open-nav" class="c-icon-hamburger" role="button" aria-pressed="false" aria-label="Open Navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-    {% if primary_nav.items %}
-      <div id="mySideNav" class="c-side-nav">
-        <a href="javascript:void(0)" class="c-button__close" onclick="closeNav()">{% include "@atoms/buttons/button.twig" with {
-            "button": {
-              "extra": [
-                bem_classes(header_nav_base_class, 'icon-close'),
-                "js-toggle"
-              ],
-              "icon": {
-                "name": "close",
-                "modifiers": "small"
-              },
-              "attributes": {
-                "aria-label": "Close",
-                "data-toggled": "body",
-                "data-prefix": "menu"
-              }
-            }
-          } %}
-        </a>
+    <div class="c-menu" id="menu">
+      <div id="mySideNav" class="c-side-nav c-menu-inner">
         {% include "@atoms/images/image/menu-blob.svg" %}
-        <ul class="{{ bem_classes(header_nav_base_class, 'list') }}">
-          {% for item in primary_nav.items %}
-            <li class="{{ bem_classes(header_nav_base_class, 'item') }}">
-              {% include "@atoms/links/link.twig" with {
-                "link": {
-                  "text": item.title,
-                  "url": item.url,
-                  "target": item.target,
-                  "extra": bem_classes(header_nav_base_class, 'link')
-                }
-              } %}
-            </li>
+        <div>
+          {% include "@molecules/components/social/social-links/social-links.twig" %}
+        </div>
+        <section class="game-container" bp="flex">
+          <div class="c-game-display l-wrap-centered">
+            <h1 class="c-display__header u-padding--half--bottom">Play a game</h1>
+          </div>
+          {% for item in players %}
+            <div class="c-memory-card" data-framework="{{ item.name }}">
+              <img class="c-card__back" src="{{ item.card_back }}">
+              <img class="c-card__front" src="{{ card_front }}">
+            </div>
+            <div class="c-memory-card" data-framework="{{ item.name }}">
+              <img class="c-card__back" src="{{ item.card_back }}">
+              <img class="c-card__front" src="{{ card_front }}">
+            </div>
           {% endfor %}
-        </ul>  
+        </section> 
       </div>
-    {% endif %}
+      <a href="javascript:void(0)" class="c-button__close" id="closeNav">
+        {% include "@atoms/buttons/button.twig" with {
+          "button": {
+            "extra": [
+              bem_classes(header_nav_base_class, 'icon-close'),
+              "js-toggle"
+            ],
+            "icon": {
+              "name": "close",
+              "modifiers": "small"
+            },
+            "attributes": {
+              "aria-label": "Close",
+              "data-toggled": "body",
+              "data-prefix": "menu"
+            }
+          }
+        } %}
+      </a>
+    </div>
   </nav>
 {% endif %}
 
-<script>
-  function openNav() {
-    document.getElementById("mySideNav").style.width = "80%";
-  }
+{% block javascript %}
+  <script src="wp-content/themes/storybook-timber/patterns/02-molecules/navigation/header/matchingGame.js"></script>
 
-  function closeNav() {
-    document.getElementById("mySideNav").style.width = "0%";
-  }
-</script>
+  <script>
+    var menu = document.getElementById('menu');
+    var openNav = document.getElementById("open-nav");// triggers open 
+    var closeNav = document.getElementById("closeNav");// triggers close 
+
+    openNav.addEventListener('click', function(e) {
+      menu.classList.toggle('menu--active'); //active class
+    });
+    
+    closeNav.addEventListener('click', function(e) {
+      menu.classList.toggle('menu--active');
+    });
+
+  </script>
+{% endblock %}
