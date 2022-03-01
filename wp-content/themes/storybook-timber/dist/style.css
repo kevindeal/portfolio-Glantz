@@ -4649,11 +4649,9 @@ h3 a:focus {
 
 .o-heading__secondary--s {
   font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
+  font-size: var(--font-size-m, 20px);
   font-size: var(--font-size-s, 15px);
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .o-heading__secondary--xs {
@@ -4669,10 +4667,7 @@ h3 a:focus {
 .o-button {
   font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
   font-size: var(--font-size-m, 20px);
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  font-size: var(--font-size-s, 15px);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -4709,10 +4704,7 @@ h3 a:focus {
 .o-button--alt {
   font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
   font-size: var(--font-size-m, 20px);
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  font-size: var(--font-size-s, 15px);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -4759,10 +4751,7 @@ h3 a:focus {
 .o-button--small {
   font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
   font-size: var(--font-size-m, 20px);
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  font-size: var(--font-size-s, 15px);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -4800,10 +4789,7 @@ h3 a:focus {
 .o-button--arrow {
   font-family: "Rubik", Arial, Helvetica, Geneva, sans-serif;
   font-size: var(--font-size-m, 20px);
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  font-size: var(--font-size-s, 15px);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
