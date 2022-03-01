@@ -6323,7 +6323,7 @@ small a:hover, small a:focus,
   display: block;
   position: absolute;
   top: -90px;
-  right: -50px;
+  right: -45px;
   background-color: #d44429;
   height: 180px;
   width: 180px;
@@ -6343,7 +6343,7 @@ small a:hover, small a:focus,
   z-index: 2;
   position: relative;
   border: none;
-  left: -70%;
+  left: -100%;
   transform: translateX(-50%) translateY(50%);
   bottom: -50%;
 }
