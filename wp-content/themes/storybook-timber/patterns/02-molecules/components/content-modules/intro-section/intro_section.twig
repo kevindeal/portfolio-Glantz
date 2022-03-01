@@ -3,8 +3,8 @@
 </pre> #}
 <div class="c-intro-section l-container">
   {% if post.image %}
-    <div class="c-intro-content u-padding--double--top u-padding--quad--bottom" bp="grid">
-      <div bp="5@md">
+    <div class="c-intro-content u-padding--triple--top u-padding--quad--bottom" bp="grid">
+      <div class="c-intro-content__intro" bp="6@lg">
         <h2 class="c-intro-heading u-padding--half--bottom o-heading__secondary--l">{{ post.heading }}</h2>
         <p class="u-padding--and-half--bottom">{{ post.description }}</p>
         {% if post.cta_button %}
@@ -14,7 +14,7 @@
           <a href="{{ post.button_link.url }}" class="o-button--arrow{{ ' ' ~ button.class }}" target="{{ cta.target ? button.target : '_self' }}">{{ post.button }}{% include "@atoms/images/image/arrow.twig" %}</a>
         {% endif %}
       </div>
-      <div class="c-intro-image u-padding--quad--left" bp="6@md">
+      <div class="c-intro-image" bp="6@lg">
        <img src="{{ Image(post.image).src }}" />
       </div>
     </div>
