@@ -45,6 +45,10 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$space-double}));
   position: relative;
   max-width: $max-width;
 
+  @include media("<medium") {
+    padding: 0 $space-third;
+  }
+
   &--m {
     @include align-center;
 
