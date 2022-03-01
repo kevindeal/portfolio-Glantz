@@ -1,7 +1,21 @@
 .c-intro {
   &-content {
+    &__intro {
+      width: 75%;
+
+      @include media("<medium") {
+        width: 100%;
+      }
+    }
+
     &__centered {
       padding: $space-quintuple;
+    }
+  }
+
+  &-image {
+    @include media("<medium") {
+      padding-top: $space-half;
     }
   }
 }

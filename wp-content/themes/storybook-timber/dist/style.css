@@ -6084,8 +6084,24 @@ small a:hover, small a:focus,
   bottom: 160px;
 }
 
+.c-intro-content__intro {
+  width: 75%;
+}
+
+@media (max-width: 719px) {
+  .c-intro-content__intro {
+    width: 100%;
+  }
+}
+
 .c-intro-content__centered {
   padding: 200px;
+}
+
+@media (max-width: 719px) {
+  .c-intro-image {
+    padding-top: 20px;
+  }
 }
 
 .c-pullquote__image img {
