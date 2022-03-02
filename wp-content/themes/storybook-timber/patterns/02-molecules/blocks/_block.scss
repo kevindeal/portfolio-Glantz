@@ -21,8 +21,13 @@
 
   &__work {
     &-title {
-      font-size: $font-size-l;
+      font-size: $font-size-xl;
       font-weight: normal;
+      line-height: 1.1;
+
+      @include media("<medium") {
+        font-size: $font-size-l;
+      }
     }
   }
 }

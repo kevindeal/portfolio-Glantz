@@ -1252,6 +1252,12 @@ iframe {
   text-align: center;
 }
 
+@media (max-width: 719px) {
+  .u-align-center {
+    text-align: left;
+  }
+}
+
 @media (max-width: 500px) {
   .u-hide-until--s {
     display: none;
@@ -6011,8 +6017,15 @@ small a:hover, small a:focus,
 }
 
 .c-card__work-title {
-  font-size: var(--font-size-l, 28px);
+  font-size: var(--font-size-xl, 42px);
   font-weight: normal;
+  line-height: 1.1;
+}
+
+@media (max-width: 719px) {
+  .c-card__work-title {
+    font-size: var(--font-size-l, 28px);
+  }
 }
 
 .c-block {
