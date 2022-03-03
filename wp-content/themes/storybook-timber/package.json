@@ -1,8 +1,8 @@
 {
-  "name": "southleft",
+  "name": "Kevin Deal",
   "version": "1.0.0",
-  "description": "Southleft theme based on the Emulsify WP Theme",
-  "author": "Southleft",
+  "description": "Kevin Deal portfolio theme based on the Emulsify WP Theme",
+  "author": "Kevin Deal",
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.6.4",

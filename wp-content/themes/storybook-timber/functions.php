@@ -76,7 +76,7 @@ class StarterSite extends Timber\ Site {
     /* Global */
     $context['logo_link'] = "/";
     $context['logo_src'] = "logo-full.svg";
-    $context['logo_alt'] = "Southleft Logo";
+    $context['logo_alt'] = "Kevin For Glantz logo";
 
     /* Menus */
     $context['primary_nav'] = new TimberMenu('Primary Navigation');
