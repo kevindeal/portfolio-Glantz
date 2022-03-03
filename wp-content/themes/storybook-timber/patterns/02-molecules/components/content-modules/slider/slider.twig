@@ -1,6 +1,6 @@
 <div class="c-slider c-full-bleed__wrap">
   <div class="c-intro-section" bp="grid">
-    <p class="c-intro-content u-padding--and-half--bottom" bp="6@md offset-4@md">{{ post.intro_section }}</p>
+    <p class="c-intro-content u-padding--and-half--bottom l-container" bp="6@md offset-4@md">{{ post.intro_section }}</p>
   </div>
   <div class="c-slider__carousel">
     {% for image in post.meta('image_gallery') %}
@@ -16,6 +16,31 @@
       slidesToShow: 3,
       slidesToScroll: 3,
       dots: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
     });
   });
 </script>
