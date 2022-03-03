@@ -7,4 +7,22 @@
       border-radius: 50%;
     }
   }
+
+  &__text {
+    position: relative;
+  }
+
+  i {
+    &::before {
+      color: $c-green;
+      position: absolute;
+      font-size: 64px;
+      left: -45px;
+      top: -25px;
+
+      @include media("<medium") {
+        font-size: 48px;
+      }
+    }
+  }
 }
