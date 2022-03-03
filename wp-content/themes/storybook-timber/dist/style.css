@@ -6130,6 +6130,24 @@ small a:hover, small a:focus,
   border-radius: 50%;
 }
 
+.c-pullquote__text {
+  position: relative;
+}
+
+.c-pullquote i::before {
+  color: #058480;
+  position: absolute;
+  font-size: 64px;
+  left: -45px;
+  top: -25px;
+}
+
+@media (max-width: 719px) {
+  .c-pullquote i::before {
+    font-size: 48px;
+  }
+}
+
 .c-slider__carousel {
   width: 100%;
 }
@@ -6805,6 +6823,12 @@ body.has-simple-header .c-header__icon-menu {
 @media (max-width: 719px) {
   .l-container {
     padding: 0 13.33333px;
+  }
+}
+
+@media (max-width: 959px) {
+  .l-container {
+    max-width: 720px;
   }
 }
 

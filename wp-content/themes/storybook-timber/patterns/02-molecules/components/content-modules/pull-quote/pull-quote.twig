@@ -10,9 +10,9 @@
     <div class="c-pullquote__content">
       {% for pull_quote in post.meta('pull_quote') %}
         <blockquote>
-          <p class="c-pullquote__text u-padding--half--bottom">{{pull_quote.quote_text}}</p>
+          <p class="c-pullquote__text u-padding--half--bottom"><i class="fa-solid fa-quote-left"></i>{{pull_quote.quote_text}}</p>
         </blockquote>
-          <h3>{{ pull_quote.quote_author }}</h3>
+          <h3 class="o-eyebrow">{{ pull_quote.quote_author }}</h3>
           <h4 class="c-pullquote__title o-heading__secondary--s">{{ pull_quote.author_title }}</h4>
       {% endfor %}
     </div>
