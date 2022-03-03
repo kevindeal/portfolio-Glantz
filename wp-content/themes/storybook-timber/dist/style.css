@@ -6132,7 +6132,6 @@ small a:hover, small a:focus,
 
 .c-slider__carousel {
   width: 100%;
-  margin: 0px auto;
 }
 
 .c-slider .c-intro-section {
@@ -6150,7 +6149,7 @@ small a:hover, small a:focus,
 
 .slick-dots li button::before {
   font-size: 20px;
-  color: #6d6e70;
+  color: #565656;
 }
 
 .slick-dots li.slick-active button::before {
